@@ -1,5 +1,5 @@
 //
-//  Setting.h
+//  StaticValue.h
 //  PaperPlane
 //
 //  Created by 이강용 on 2014. 4. 13..
@@ -8,11 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
-#import "StaticValue.h"
 
-@interface Setting : NSObject {
+@interface StaticValue : NSObject
 
-}
+//디바이스 높이 값
+@property (nonatomic) CGFloat deviceHSize;
 
-+(Setting *)getInstance;
++(StaticValue *)getInstance;
 @end

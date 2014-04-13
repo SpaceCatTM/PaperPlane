@@ -213,6 +213,7 @@
 		C0AD4AD518FA4628008667F4 /* HelloWorldScene.m in Sources */ = {isa = PBXBuildFile; fileRef = C0AD4AD418FA4628008667F4 /* HelloWorldScene.m */; };
 		C0AD4AD818FA4628008667F4 /* IntroScene.m in Sources */ = {isa = PBXBuildFile; fileRef = C0AD4AD718FA4628008667F4 /* IntroScene.m */; };
 		C0F01BB618FA4782002442C2 /* Setting.m in Sources */ = {isa = PBXBuildFile; fileRef = C0F01BB518FA4782002442C2 /* Setting.m */; };
+		C0F01BB918FA4E04002442C2 /* StaticValue.m in Sources */ = {isa = PBXBuildFile; fileRef = C0F01BB818FA4E04002442C2 /* StaticValue.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -656,6 +657,8 @@
 		C0AD4AD718FA4628008667F4 /* IntroScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = IntroScene.m; path = Classes/IntroScene.m; sourceTree = "<group>"; };
 		C0F01BB418FA4782002442C2 /* Setting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Setting.h; sourceTree = "<group>"; };
 		C0F01BB518FA4782002442C2 /* Setting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Setting.m; sourceTree = "<group>"; };
+		C0F01BB718FA4E04002442C2 /* StaticValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StaticValue.h; sourceTree = "<group>"; };
+		C0F01BB818FA4E04002442C2 /* StaticValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StaticValue.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1575,6 +1578,8 @@
 			children = (
 				C0F01BB418FA4782002442C2 /* Setting.h */,
 				C0F01BB518FA4782002442C2 /* Setting.m */,
+				C0F01BB718FA4E04002442C2 /* StaticValue.h */,
+				C0F01BB818FA4E04002442C2 /* StaticValue.m */,
 			);
 			name = Statics;
 			sourceTree = "<group>";
@@ -1814,6 +1819,7 @@
 				C0AD494E18FA4626008667F4 /* cocos2d.m in Sources */,
 				C0AD49D618FA4627008667F4 /* ALSource.m in Sources */,
 				C0AD48DE18FA4625008667F4 /* CCParticleSystem.m in Sources */,
+				C0F01BB918FA4E04002442C2 /* StaticValue.m in Sources */,
 				C0AD490318FA4625008667F4 /* CCScene.m in Sources */,
 				C0AD493118FA4625008667F4 /* CCTexture.m in Sources */,
 				C0AD49C318FA4626008667F4 /* ALCaptureDevice.m in Sources */,

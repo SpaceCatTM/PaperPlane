@@ -83,6 +83,7 @@
     // In v3, touch is enabled by setting userInterActionEnabled for the individual nodes
     // Per frame update is automatically enabled, if update is overridden
     
+    
 }
 
 // -----------------------------------------------------------------------
