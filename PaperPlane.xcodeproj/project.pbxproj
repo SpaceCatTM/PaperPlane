@@ -212,6 +212,7 @@
 		C0AD4AD218FA4628008667F4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C0AD4AD118FA4628008667F4 /* AppDelegate.m */; };
 		C0AD4AD518FA4628008667F4 /* HelloWorldScene.m in Sources */ = {isa = PBXBuildFile; fileRef = C0AD4AD418FA4628008667F4 /* HelloWorldScene.m */; };
 		C0AD4AD818FA4628008667F4 /* IntroScene.m in Sources */ = {isa = PBXBuildFile; fileRef = C0AD4AD718FA4628008667F4 /* IntroScene.m */; };
+		C0F01BB618FA4782002442C2 /* Setting.m in Sources */ = {isa = PBXBuildFile; fileRef = C0F01BB518FA4782002442C2 /* Setting.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -653,6 +654,8 @@
 		C0AD4AD418FA4628008667F4 /* HelloWorldScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = HelloWorldScene.m; path = Classes/HelloWorldScene.m; sourceTree = "<group>"; };
 		C0AD4AD618FA4628008667F4 /* IntroScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = IntroScene.h; path = Classes/IntroScene.h; sourceTree = "<group>"; };
 		C0AD4AD718FA4628008667F4 /* IntroScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = IntroScene.m; path = Classes/IntroScene.m; sourceTree = "<group>"; };
+		C0F01BB418FA4782002442C2 /* Setting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Setting.h; sourceTree = "<group>"; };
+		C0F01BB518FA4782002442C2 /* Setting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Setting.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1540,6 +1543,9 @@
 		C0AD4ACF18FA4628008667F4 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				C0F01BB318FA472A002442C2 /* Statics */,
+				C0F01BB218FA4714002442C2 /* Layers */,
+				C0F01BB118FA46E1002442C2 /* Scenes */,
 				C0AD4AD018FA4628008667F4 /* AppDelegate.h */,
 				C0AD4AD118FA4628008667F4 /* AppDelegate.m */,
 				C0AD4AD318FA4628008667F4 /* HelloWorldScene.h */,
@@ -1548,6 +1554,29 @@
 				C0AD4AD718FA4628008667F4 /* IntroScene.m */,
 			);
 			name = Classes;
+			sourceTree = "<group>";
+		};
+		C0F01BB118FA46E1002442C2 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Scenes;
+			sourceTree = "<group>";
+		};
+		C0F01BB218FA4714002442C2 /* Layers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Layers;
+			sourceTree = "<group>";
+		};
+		C0F01BB318FA472A002442C2 /* Statics */ = {
+			isa = PBXGroup;
+			children = (
+				C0F01BB418FA4782002442C2 /* Setting.h */,
+				C0F01BB518FA4782002442C2 /* Setting.m */,
+			);
+			name = Statics;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1664,6 +1693,7 @@
 				C0AD49E918FA4627008667F4 /* IOSVersion.m in Sources */,
 				C0AD489E18FA4624008667F4 /* CCDirector.m in Sources */,
 				C0AD4A0918FA4627008667F4 /* CCScrollView.m in Sources */,
+				C0F01BB618FA4782002442C2 /* Setting.m in Sources */,
 				C0AD48FC18FA4625008667F4 /* CCResponder.m in Sources */,
 				C0AD489318FA4624008667F4 /* CCClippingNode.m in Sources */,
 				C0AD492618FA4625008667F4 /* CCSpriteBatchNode.m in Sources */,
@@ -1989,6 +2019,7 @@
 				C0AD4ADD18FA4628008667F4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C0AD4ADE18FA4628008667F4 /* Build configuration list for PBXNativeTarget "PaperPlane" */ = {
 			isa = XCConfigurationList;
@@ -1997,6 +2028,7 @@
 				C0AD4AE018FA4628008667F4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
