@@ -10,6 +10,7 @@
 // Import the interfaces
 #import "IntroScene.h"
 #import "HelloWorldScene.h"
+#import "DisplaySetting.h"
 
 // -----------------------------------------------------------------------
 #pragma mark - IntroScene
@@ -21,8 +22,7 @@
 #pragma mark - Create & Destroy
 // -----------------------------------------------------------------------
 
-+ (IntroScene *)scene
-{
++ (IntroScene *)scene {
 	return [[self alloc] init];
 }
 
@@ -39,7 +39,21 @@
     [self addChild:background];
     
     // Hello world
-    CCLabelTTF *label = [CCLabelTTF labelWithString:@"Hello World" fontName:@"Chalkduster" fontSize:36.0f];
+    CCLabelTTF *label;
+    
+    if ([DisplaySetting isWide] == YES)
+    {
+        label = [CCLabelTTF labelWithString:@"Hello World (4)"
+                                   fontName:@"Chalkduster"
+                                   fontSize:36.0f];
+    }
+    else
+    {
+        label = [CCLabelTTF labelWithString:@"Hello World (3.5)"
+                                   fontName:@"Chalkduster"
+                                   fontSize:36.0f];
+    }
+    
     label.positionType = CCPositionTypeNormalized;
     label.color = [CCColor redColor];
     label.position = ccp(0.5f, 0.5f); // Middle of screen
@@ -52,6 +66,7 @@
     [helloWorldButton setTarget:self selector:@selector(onSpinningClicked:)];
     [self addChild:helloWorldButton];
   
+    
 
     // done
 	return self;
