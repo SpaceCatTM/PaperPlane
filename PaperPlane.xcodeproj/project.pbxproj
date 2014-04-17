@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C0412B6E190020F200335712 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = C0412B6D190020F200335712 /* GameScene.m */; };
 		C0AD482918FA4623008667F4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0AD482818FA4623008667F4 /* QuartzCore.framework */; };
 		C0AD482B18FA4623008667F4 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0AD482A18FA4623008667F4 /* OpenGLES.framework */; };
 		C0AD482D18FA4623008667F4 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0AD482C18FA4623008667F4 /* OpenAL.framework */; };
@@ -228,6 +229,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C0412B6C190020F200335712 /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
+		C0412B6D190020F200335712 /* GameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
 		C0AD482518FA4623008667F4 /* PaperPlane.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaperPlane.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0AD482818FA4623008667F4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		C0AD482A18FA4623008667F4 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -1563,7 +1566,6 @@
 				C0D5BF4F190010F500174404 /* Objects */,
 				C0A1D7A818FC2A99000E13EB /* Protocols */,
 				C0F01BB318FA472A002442C2 /* Settings */,
-				C0F01BB218FA4714002442C2 /* Layers */,
 				C0F01BB118FA46E1002442C2 /* Scenes */,
 				C0AD4AD018FA4628008667F4 /* AppDelegate.h */,
 				C0AD4AD118FA4628008667F4 /* AppDelegate.m */,
@@ -1589,15 +1591,10 @@
 				C0AD4AD718FA4628008667F4 /* IntroScene.m */,
 				C0AD4AD318FA4628008667F4 /* HelloWorldScene.h */,
 				C0AD4AD418FA4628008667F4 /* HelloWorldScene.m */,
+				C0412B6C190020F200335712 /* GameScene.h */,
+				C0412B6D190020F200335712 /* GameScene.m */,
 			);
 			name = Scenes;
-			sourceTree = "<group>";
-		};
-		C0F01BB218FA4714002442C2 /* Layers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Layers;
 			sourceTree = "<group>";
 		};
 		C0F01BB318FA472A002442C2 /* Settings */ = {
@@ -1783,6 +1780,7 @@
 				C0AD49BA18FA4626008667F4 /* OALSimpleAudio.m in Sources */,
 				C0AD48AC18FA4624008667F4 /* CCGLProgram.m in Sources */,
 				C0D5BF551900112F00174404 /* Meteor.m in Sources */,
+				C0412B6E190020F200335712 /* GameScene.m in Sources */,
 				C0AD4ACE18FA4628008667F4 /* main.m in Sources */,
 				C0AD49E118FA4627008667F4 /* OALAudioSession.m in Sources */,
 				C0AD4A5818FA4627008667F4 /* CCBLocalizationManager.m in Sources */,
