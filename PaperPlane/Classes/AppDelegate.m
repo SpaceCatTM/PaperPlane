@@ -9,6 +9,7 @@
 
 #import "AppDelegate.h"
 #import "DisplaySetting.h"
+#import "GameScene.h"
 #import "IntroScene.h"
 #import "HelloWorldScene.h"
 
@@ -38,7 +39,7 @@
         // CCSetupScreenMode: CCScreenModeFixed,
 		
         // Run in portrait mode.
-        // CCSetupScreenOrientation: CCScreenOrientationPortrait,
+        CCSetupScreenOrientation: CCScreenOrientationPortrait,
 		
         // Run at a reduced framerate.
         // CCSetupAnimationInterval: @(1.0/30.0),
@@ -58,11 +59,11 @@
 {
     if ([DisplaySetting isWide] == YES)
     {
-        return [IntroScene scene]; // 4인치
+        return [GameScene scene]; // 4인치
     }
     else
     {
-        return [IntroScene scene]; // 3.5인치
+        return [GameScene scene]; // 3.5인치
     }
 }
 

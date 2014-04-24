@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		C0412B6E190020F200335712 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = C0412B6D190020F200335712 /* GameScene.m */; };
+		C04AB10A1905601F002246F2 /* GameParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = C04AB1091905601F002246F2 /* GameParameters.m */; };
+		C04AB10C190564BA002246F2 /* Enemy.png in Resources */ = {isa = PBXBuildFile; fileRef = C04AB10B190564BA002246F2 /* Enemy.png */; };
+		C04AB10E190564C0002246F2 /* rock.png in Resources */ = {isa = PBXBuildFile; fileRef = C04AB10D190564C0002246F2 /* rock.png */; };
+		C04AB110190564C7002246F2 /* plane.png in Resources */ = {isa = PBXBuildFile; fileRef = C04AB10F190564C7002246F2 /* plane.png */; };
+		C04AB114190567D2002246F2 /* CollisionController.m in Sources */ = {isa = PBXBuildFile; fileRef = C04AB113190567D2002246F2 /* CollisionController.m */; };
 		C0AD482918FA4623008667F4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0AD482818FA4623008667F4 /* QuartzCore.framework */; };
 		C0AD482B18FA4623008667F4 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0AD482A18FA4623008667F4 /* OpenGLES.framework */; };
 		C0AD482D18FA4623008667F4 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0AD482C18FA4623008667F4 /* OpenAL.framework */; };
@@ -231,6 +236,13 @@
 /* Begin PBXFileReference section */
 		C0412B6C190020F200335712 /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
 		C0412B6D190020F200335712 /* GameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
+		C04AB1081905601F002246F2 /* GameParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameParameters.h; sourceTree = "<group>"; };
+		C04AB1091905601F002246F2 /* GameParameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameParameters.m; sourceTree = "<group>"; };
+		C04AB10B190564BA002246F2 /* Enemy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Enemy.png; sourceTree = "<group>"; };
+		C04AB10D190564C0002246F2 /* rock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rock.png; sourceTree = "<group>"; };
+		C04AB10F190564C7002246F2 /* plane.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plane.png; sourceTree = "<group>"; };
+		C04AB112190567D2002246F2 /* CollisionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollisionController.h; sourceTree = "<group>"; };
+		C04AB113190567D2002246F2 /* CollisionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollisionController.m; sourceTree = "<group>"; };
 		C0AD482518FA4623008667F4 /* PaperPlane.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaperPlane.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0AD482818FA4623008667F4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		C0AD482A18FA4623008667F4 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -747,6 +759,9 @@
 		C0AD484118FA4623008667F4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C04AB10F190564C7002246F2 /* plane.png */,
+				C04AB10D190564C0002246F2 /* rock.png */,
+				C04AB10B190564BA002246F2 /* Enemy.png */,
 				C0AD484218FA4623008667F4 /* Default.png */,
 				C0AD484418FA4623008667F4 /* Default@2x.png */,
 				C0AD484618FA4624008667F4 /* Default-568h@2x.png */,
@@ -1569,6 +1584,8 @@
 				C0F01BB118FA46E1002442C2 /* Scenes */,
 				C0AD4AD018FA4628008667F4 /* AppDelegate.h */,
 				C0AD4AD118FA4628008667F4 /* AppDelegate.m */,
+				C04AB112190567D2002246F2 /* CollisionController.h */,
+				C04AB113190567D2002246F2 /* CollisionController.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -1602,6 +1619,8 @@
 			children = (
 				C0D5BF43190004E900174404 /* DisplaySetting.h */,
 				C0D5BF44190004E900174404 /* DisplaySetting.m */,
+				C04AB1081905601F002246F2 /* GameParameters.h */,
+				C04AB1091905601F002246F2 /* GameParameters.m */,
 			);
 			name = Settings;
 			sourceTree = "<group>";
@@ -1680,6 +1699,7 @@
 				C0AD484E18FA4624008667F4 /* Icon@2x.png in Resources */,
 				C0AD486018FA4624008667F4 /* Icon-Small@2x.png in Resources */,
 				C0AD485218FA4624008667F4 /* Icon-72@2x.png in Resources */,
+				C04AB10E190564C0002246F2 /* rock.png in Resources */,
 				C0AD484318FA4623008667F4 /* Default.png in Resources */,
 				C0AD484C18FA4624008667F4 /* Icon.png in Resources */,
 				C0AD485A18FA4624008667F4 /* Icon-iPad-Spotlight-iOS7@2x.png in Resources */,
@@ -1693,8 +1713,10 @@
 				C0AD486718FA4624008667F4 /* iTunesArtwork in Resources */,
 				C0AD486218FA4624008667F4 /* Icon-Spotlight-iOS7.png in Resources */,
 				C0AD485618FA4624008667F4 /* Icon-76@2x.png in Resources */,
+				C04AB10C190564BA002246F2 /* Enemy.png in Resources */,
 				C0AD4ACA18FA4628008667F4 /* LICENSE_Chipmunk.txt in Resources */,
 				C0AD486418FA4624008667F4 /* Icon-Spotlight-iOS7@2x.png in Resources */,
+				C04AB110190564C7002246F2 /* plane.png in Resources */,
 				C0AD485418FA4624008667F4 /* Icon-76.png in Resources */,
 				C0AD4A2A18FA4627008667F4 /* ChangeLog in Resources */,
 				C0AD486918FA4624008667F4 /* iTunesArtwork@2x in Resources */,
@@ -1772,6 +1794,7 @@
 				C0AD487818FA4624008667F4 /* CCActionInstant.m in Sources */,
 				C0AD497218FA4626008667F4 /* base64.c in Sources */,
 				C0AD49B118FA4626008667F4 /* OALAudioTrack.m in Sources */,
+				C04AB114190567D2002246F2 /* CollisionController.m in Sources */,
 				C0AD48F418FA4625008667F4 /* CCProgressNode.m in Sources */,
 				C0AD48E718FA4625008667F4 /* CCPhysicsBody.m in Sources */,
 				C0AD496C18FA4626008667F4 /* CCWindow.m in Sources */,
@@ -1809,6 +1832,7 @@
 				C0AD4AD518FA4628008667F4 /* HelloWorldScene.m in Sources */,
 				C0AD4A3518FA4627008667F4 /* neon_matrix_impl.c in Sources */,
 				C0AD48BA18FA4624008667F4 /* CCLabelTTF.m in Sources */,
+				C04AB10A1905601F002246F2 /* GameParameters.m in Sources */,
 				C0AD496F18FA4626008667F4 /* NSEvent+CC.m in Sources */,
 				C0AD49CC18FA4626008667F4 /* ALDevice.m in Sources */,
 				C0AD4A3F18FA4627008667F4 /* vec2.c in Sources */,

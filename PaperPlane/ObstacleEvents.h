@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol ObstacleEvents <NSObject>
+@protocol ObstacleEvents
 
 // 아래로 내려오는 경우
 -(void)moveDown;

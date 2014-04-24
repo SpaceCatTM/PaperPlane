@@ -9,15 +9,15 @@
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
 
+#import "DisplaySetting.h"
+#import "PlayerEvents.h"
 #import "Plane.h"
-#import "Meteor.h"
 
 @interface GameScene : CCScene {
     @private
-    CCSprite *_player;
-    CCSprite *_obstracles[10];
+    Plane *_player;
 }
 
--(void)initialize;
--(void)addPlayer;
++(GameScene *)scene;
+-(id)init;
 @end

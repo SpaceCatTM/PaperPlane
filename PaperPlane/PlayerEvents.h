@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol PlayerEvents <NSObject>
+@protocol PlayerEvents
 
 // 죄로 움직이는 경우
 -(void)moveLeft;
