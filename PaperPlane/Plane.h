@@ -6,7 +6,7 @@
 //  Copyright (c) 2014년 이강용. All rights reserved.
 //
 
-#import "CCSprite.h"
+#import "cocos2d.h"
 #import "PlayerEvents.h"
 
 @interface Plane : CCSprite <PlayerEvents>

@@ -9,10 +9,9 @@
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
 
-@interface DisplaySetting : NSObject {
-    
-}
+@interface DisplaySetting : NSObject
 
 +(CGSize)getSize;
 +(BOOL)isWide;
+
 @end

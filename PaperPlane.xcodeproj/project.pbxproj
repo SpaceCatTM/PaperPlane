@@ -13,6 +13,7 @@
 		C04AB10E190564C0002246F2 /* rock.png in Resources */ = {isa = PBXBuildFile; fileRef = C04AB10D190564C0002246F2 /* rock.png */; };
 		C04AB110190564C7002246F2 /* plane.png in Resources */ = {isa = PBXBuildFile; fileRef = C04AB10F190564C7002246F2 /* plane.png */; };
 		C04AB114190567D2002246F2 /* CollisionController.m in Sources */ = {isa = PBXBuildFile; fileRef = C04AB113190567D2002246F2 /* CollisionController.m */; };
+		C0A44C07190B4F8B008D145E /* SpawnController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0A44C06190B4F8B008D145E /* SpawnController.m */; };
 		C0AD482918FA4623008667F4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0AD482818FA4623008667F4 /* QuartzCore.framework */; };
 		C0AD482B18FA4623008667F4 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0AD482A18FA4623008667F4 /* OpenGLES.framework */; };
 		C0AD482D18FA4623008667F4 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0AD482C18FA4623008667F4 /* OpenAL.framework */; };
@@ -243,6 +244,8 @@
 		C04AB10F190564C7002246F2 /* plane.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plane.png; sourceTree = "<group>"; };
 		C04AB112190567D2002246F2 /* CollisionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollisionController.h; sourceTree = "<group>"; };
 		C04AB113190567D2002246F2 /* CollisionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollisionController.m; sourceTree = "<group>"; };
+		C0A44C05190B4F8B008D145E /* SpawnController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpawnController.h; sourceTree = "<group>"; };
+		C0A44C06190B4F8B008D145E /* SpawnController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpawnController.m; sourceTree = "<group>"; };
 		C0AD482518FA4623008667F4 /* PaperPlane.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaperPlane.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0AD482818FA4623008667F4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		C0AD482A18FA4623008667F4 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -1586,6 +1589,8 @@
 				C0AD4AD118FA4628008667F4 /* AppDelegate.m */,
 				C04AB112190567D2002246F2 /* CollisionController.h */,
 				C04AB113190567D2002246F2 /* CollisionController.m */,
+				C0A44C05190B4F8B008D145E /* SpawnController.h */,
+				C0A44C06190B4F8B008D145E /* SpawnController.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -1870,6 +1875,7 @@
 				C0AD48DE18FA4625008667F4 /* CCParticleSystem.m in Sources */,
 				C0AD490318FA4625008667F4 /* CCScene.m in Sources */,
 				C0AD493118FA4625008667F4 /* CCTexture.m in Sources */,
+				C0A44C07190B4F8B008D145E /* SpawnController.m in Sources */,
 				C0AD49C318FA4626008667F4 /* ALCaptureDevice.m in Sources */,
 				C0AD48FF18FA4625008667F4 /* CCResponderManager.m in Sources */,
 				C0AD489718FA4624008667F4 /* CCConfiguration.m in Sources */,

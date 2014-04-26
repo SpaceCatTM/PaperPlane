@@ -24,6 +24,13 @@
     [self addChild:_player];
 }
 
+-(void)startSpawn
+{
+    _spawnController = [SpawnController new];
+    [_spawnController startSpawn];
+    [self addChild:_spawnController];
+}
+
 +(GameScene *)scene
 {
 	return [[self alloc] init];
@@ -38,6 +45,7 @@
     
     [self loadResources];
     [self initAndAddPlayer];
+    [self startSpawn];
     
     return self;
 }

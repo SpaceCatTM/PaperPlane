@@ -13,7 +13,13 @@
 // 아래로 내려오는 경우
 -(void)moveDown
 {
-
+    CGPoint positionFrom = CGPointMake((random() % 100) / 100.0f, 1.0f);
+    CGPoint positionTo   = CGPointMake(positionFrom.x, -0.1f);
+    
+    self.positionType = CCPositionTypeNormalized;
+    self.position = positionFrom;
+    
+    [self runAction:[CCActionMoveTo actionWithDuration:5.0f position:positionTo]];
 }
 
 // 공격하는 경우

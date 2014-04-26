@@ -11,11 +11,15 @@
 
 #import "DisplaySetting.h"
 #import "PlayerEvents.h"
+#import "SpawnController.h"
 #import "Plane.h"
 
 @interface GameScene : CCScene {
     @private
     Plane *_player;
+    
+    @private
+    SpawnController *_spawnController;
 }
 
 +(GameScene *)scene;
