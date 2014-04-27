@@ -11,17 +11,19 @@
 
 @implementation GameScene
 
--(void)loadResources
+-(void)initPhysics
 {
-    _player = [Plane spriteWithImageNamed:@"plane.png"];
+    _physicsNode = [CCPhysicsNode node];
+    _physicsNode.contentSize = self.contentSize;
+    [self addChild:_physicsNode];
 }
 
 -(void)initAndAddPlayer
 {
+    _player = [Plane node];
     _player.positionType = CCPositionTypeNormalized;
-    _player.position = ccp(0.5, 0.1);
-    _player.scale = 0.1;
-    [self addChild:_player];
+    _player.position = [GameParameters getPlayerInitialPosition];
+    [_physicsNode addChild:_player];
 }
 
 -(void)startSpawn
@@ -43,7 +45,7 @@
 
     self.userInteractionEnabled = YES;
     
-    [self loadResources];
+    [self initPhysics];
     [self initAndAddPlayer];
     [self startSpawn];
     
@@ -56,20 +58,10 @@
     if (touchLocation.x < [DisplaySetting getSize].width / 2)
     {
         [_player moveLeft];
-    
-        if ([_player position].x < 0)
-        {
-            _player.position = CGPointMake(0, _player.position.y);
-        }
     }
     else
     {
         [_player moveRight];
-   
-        if ([_player position].x > 1.0f)
-        {
-            _player.position = CGPointMake(1, _player.position.y);
-        }
     }
 }
 

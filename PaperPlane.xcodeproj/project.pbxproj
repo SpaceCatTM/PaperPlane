@@ -12,7 +12,6 @@
 		C04AB10C190564BA002246F2 /* Enemy.png in Resources */ = {isa = PBXBuildFile; fileRef = C04AB10B190564BA002246F2 /* Enemy.png */; };
 		C04AB10E190564C0002246F2 /* rock.png in Resources */ = {isa = PBXBuildFile; fileRef = C04AB10D190564C0002246F2 /* rock.png */; };
 		C04AB110190564C7002246F2 /* plane.png in Resources */ = {isa = PBXBuildFile; fileRef = C04AB10F190564C7002246F2 /* plane.png */; };
-		C04AB114190567D2002246F2 /* CollisionController.m in Sources */ = {isa = PBXBuildFile; fileRef = C04AB113190567D2002246F2 /* CollisionController.m */; };
 		C0A44C07190B4F8B008D145E /* SpawnController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0A44C06190B4F8B008D145E /* SpawnController.m */; };
 		C0AD482918FA4623008667F4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0AD482818FA4623008667F4 /* QuartzCore.framework */; };
 		C0AD482B18FA4623008667F4 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0AD482A18FA4623008667F4 /* OpenGLES.framework */; };
@@ -242,8 +241,6 @@
 		C04AB10B190564BA002246F2 /* Enemy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Enemy.png; sourceTree = "<group>"; };
 		C04AB10D190564C0002246F2 /* rock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rock.png; sourceTree = "<group>"; };
 		C04AB10F190564C7002246F2 /* plane.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plane.png; sourceTree = "<group>"; };
-		C04AB112190567D2002246F2 /* CollisionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollisionController.h; sourceTree = "<group>"; };
-		C04AB113190567D2002246F2 /* CollisionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollisionController.m; sourceTree = "<group>"; };
 		C0A44C05190B4F8B008D145E /* SpawnController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpawnController.h; sourceTree = "<group>"; };
 		C0A44C06190B4F8B008D145E /* SpawnController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpawnController.m; sourceTree = "<group>"; };
 		C0AD482518FA4623008667F4 /* PaperPlane.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaperPlane.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1587,8 +1584,6 @@
 				C0F01BB118FA46E1002442C2 /* Scenes */,
 				C0AD4AD018FA4628008667F4 /* AppDelegate.h */,
 				C0AD4AD118FA4628008667F4 /* AppDelegate.m */,
-				C04AB112190567D2002246F2 /* CollisionController.h */,
-				C04AB113190567D2002246F2 /* CollisionController.m */,
 				C0A44C05190B4F8B008D145E /* SpawnController.h */,
 				C0A44C06190B4F8B008D145E /* SpawnController.m */,
 			);
@@ -1799,7 +1794,6 @@
 				C0AD487818FA4624008667F4 /* CCActionInstant.m in Sources */,
 				C0AD497218FA4626008667F4 /* base64.c in Sources */,
 				C0AD49B118FA4626008667F4 /* OALAudioTrack.m in Sources */,
-				C04AB114190567D2002246F2 /* CollisionController.m in Sources */,
 				C0AD48F418FA4625008667F4 /* CCProgressNode.m in Sources */,
 				C0AD48E718FA4625008667F4 /* CCPhysicsBody.m in Sources */,
 				C0AD496C18FA4626008667F4 /* CCWindow.m in Sources */,

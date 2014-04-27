@@ -11,8 +11,6 @@
 
 @interface GameParameters : NSObject
 
-+(CGFloat) getRestorePositionInterval;
-+(CGFloat) getRestoreHorizonalForce;
 +(CGPoint) getPlayerInitialPosition;
 +(CGFloat) getVerticalForce;
 +(CGFloat) getHorizonalForce;

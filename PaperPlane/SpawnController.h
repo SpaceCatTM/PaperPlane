@@ -11,7 +11,8 @@
 
 @interface SpawnController : CCNode
 {
-    @private NSMutableArray *_spawnObjects;
+    @private
+    NSMutableArray *_spawnObjects;
 }
 
 -(void)startSpawn;

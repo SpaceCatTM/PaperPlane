@@ -10,6 +10,7 @@
 #import "cocos2d.h"
 
 #import "DisplaySetting.h"
+#import "GameParameters.h"
 #import "PlayerEvents.h"
 #import "SpawnController.h"
 #import "Plane.h"
@@ -19,6 +20,7 @@
     Plane *_player;
     
     @private
+    CCPhysicsNode *_physicsNode;
     SpawnController *_spawnController;
 }
 

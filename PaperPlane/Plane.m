@@ -12,20 +12,29 @@
 
 @implementation Plane
 
--(void)goCenter
+-(void)update:(CCTime)delta
 {
-    if (self.position.x > 0.49f && self.position.x < 0.51f)
+    // 이동 방향의 반대 방향으로 감속을 준다.
+    if (self.physicsBody.velocity.x > 0)
     {
-        [self setPosition:CGPointMake(0.5f, self.position.y)];
-        [self unschedule:@selector(goCenter)];
+        [self.physicsBody applyImpulse:CGPointMake(-1.0f, 0.0f)];
     }
-    else if (self.position.x < 0.5f)
+    else if (self.physicsBody.velocity.x < 0)
     {
-        [self setPosition:CGPointMake(self.position.x + [GameParameters getRestoreHorizonalForce], self.position.y)];
+        [self.physicsBody applyImpulse:CGPointMake(1.0f, 0.0f)];
     }
-    else if (self.position.x > 0.5f)
+    
+    // 기울어진 각도에 반대의 힘으로 각도를 준다.
+    [self.physicsBody applyAngularImpulse:self.rotation];
+
+    // 좌, 우 이동 범위 지정
+    if (self.position.x < 0.05)
     {
-        [self setPosition:CGPointMake(self.position.x - [GameParameters getRestoreHorizonalForce], self.position.y)];
+        self.position = CGPointMake(0.05, self.position.y);
+    }
+    else if (self.position.x > 0.95)
+    {
+        self.position = CGPointMake(0.95, self.position.y);
     }
 }
 
@@ -34,13 +43,8 @@
 {
     CCLOG(@"moveLeft");
 
-    [self setPosition:CGPointMake(self.position.x - [GameParameters getHorizonalForce], self.position.y)];
-
-    if (self.position.x != 0.5f)
-    {
-        [self unschedule:@selector(goCenter)];
-        [self schedule:@selector(goCenter) interval:[GameParameters getRestorePositionInterval]];
-    }
+    [self.physicsBody applyAngularImpulse:50];
+    [self.physicsBody applyImpulse:CGPointMake(-50.0f, 0.0f)];
 }
 
 // 오른쪽으로 이동하는 경우
@@ -48,13 +52,8 @@
 {
     CCLOG(@"moveRight");
  
-    [self setPosition:CGPointMake(self.position.x + [GameParameters getHorizonalForce], self.position.y)];
-
-    if (self.position.x != 0.5f)
-    {
-        [self unschedule:@selector(goCenter)];
-        [self schedule:@selector(goCenter) interval:[GameParameters getRestorePositionInterval]];
-    }
+    [self.physicsBody applyAngularImpulse:-50];
+    [self.physicsBody applyImpulse:CGPointMake(50.0f, 0.0f)];
 }
 
 // 공격을 받았을 경우
@@ -67,6 +66,19 @@
 -(void)dead
 {
 
+}
+
+// 초기화
+-(id)init
+{
+    self = [super init];
+    if (!self) return (nil);
+    
+    self = [self initWithImageNamed:@"plane.png"];
+    self.physicsBody = [CCPhysicsBody bodyWithRect:self.boundingBox cornerRadius:0];
+    self.scale = 0.1;
+    
+    return self;
 }
 
 @end
