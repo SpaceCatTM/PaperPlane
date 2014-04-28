@@ -23,14 +23,15 @@
     _player = [Plane node];
     _player.positionType = CCPositionTypeNormalized;
     _player.position = [GameParameters getPlayerInitialPosition];
+    _player.physicsBody.sensor = YES;
     [_physicsNode addChild:_player];
 }
 
 -(void)startSpawn
 {
-    _spawnController = [SpawnController new];
+    _spawnController = [SpawnController node];
     [_spawnController startSpawn];
-    [self addChild:_spawnController];
+    [_physicsNode addChild:_spawnController];
 }
 
 +(GameScene *)scene
@@ -65,4 +66,13 @@
     }
 }
 
+-(void)ccPhysicsCollisionPostSolve:(CCPhysicsCollisionPair *)pair typeA:(CCNode *)nodeA typeB:(CCNode *)nodeB
+{
+    CCLOG(@"COLLISION");
+}
+
+-(void)ccPhysicsCollisionSeparate:(CCPhysicsCollisionPair *)pair typeA:(CCNode *)nodeA typeB:(CCNode *)nodeB
+{
+    CCLOG(@"COLLISION");
+}
 @end

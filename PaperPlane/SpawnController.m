@@ -31,13 +31,13 @@
     
     if (randomNumber > 25)
     {
-        Meteor *meteor = [[Meteor node] initWithImageNamed:@"rock.png"];
+        Meteor *meteor = [Meteor node];
     
         // 객체를 리스트에 추가한다.
         [self addSpawnObject:meteor];
         
         // 객체를 화면에 표시한다.
-        [[self scene] addChild:meteor];
+        [self.parent addChild:meteor];
    
         // 객체를 화면에서 내려오도록 한다.
         [meteor moveDown];
