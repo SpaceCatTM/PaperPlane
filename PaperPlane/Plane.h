@@ -8,6 +8,7 @@
 
 #import "cocos2d.h"
 #import "PlayerEvents.h"
+#import "GameParameters.h"
 
 @interface Plane : CCSprite <PlayerEvents>
 

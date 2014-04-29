@@ -7,13 +7,11 @@
 //
 
 #import "Plane.h"
-#import "GameParameters.h"
-#import "PlayerEvents.h"
 
 @implementation Plane
 
 // 정점 리스트
--(CGPoint *)getPoints
+-(CGPoint *)getVertices
 {
     return (CGPoint[])
     {
@@ -40,9 +38,8 @@
     };
 };
 
--(void)update:(CCTime)delta
+-(void)controlVelocity
 {
-    // 이동 방향의 반대 방향으로 감속을 준다.
     if (self.physicsBody.velocity.x > 0)
     {
         [self.physicsBody applyImpulse:CGPointMake(-1, 0)];
@@ -51,11 +48,22 @@
     {
         [self.physicsBody applyImpulse:CGPointMake(1, 0)];
     }
-    
-    // 기울어진 각도에 반대의 힘으로 각도를 준다.
-    [self.physicsBody applyAngularImpulse:self.rotation];
-    
-    // 좌, 우 이동 범위 지정
+}
+
+-(void)controlRotation
+{
+    if (self.rotation < 0)
+    {
+        [self.physicsBody applyAngularImpulse:-10];
+    }
+    else if (self.rotation > 0)
+    {
+        [self.physicsBody applyAngularImpulse:10];
+    }
+}
+
+-(void)controlHorizontalPosition
+{
     if (self.position.x < 0.05)
     {
         self.physicsBody.velocity = CGPointZero;
@@ -68,12 +76,34 @@
     }
 }
 
+-(void)controlVerticalPosition
+{
+    CGFloat initialPosition = [GameParameters getPlayerInitialPosition].y;
+    
+    if (self.position.y < initialPosition)
+    {
+        [self.physicsBody applyImpulse:CGPointMake(0, 1)];
+    }
+    else if (self.position.y > initialPosition)
+    {
+        [self.physicsBody applyImpulse:CGPointMake(0, -1)];
+    }
+}
+
+-(void)update:(CCTime)delta
+{
+    [self controlVelocity];
+    [self controlRotation];
+    [self controlHorizontalPosition];
+    [self controlVerticalPosition];
+}
+
 // 왼쪽으로 이동하는 경우
 -(void)moveLeft;
 {
     CCLOG(@"moveLeft");
 
-    [self.physicsBody applyAngularImpulse:25];
+    [self.physicsBody applyAngularImpulse:100];
     [self.physicsBody applyImpulse:CGPointMake(-500, 0)];
 }
 
@@ -82,7 +112,7 @@
 {
     CCLOG(@"moveRight");
  
-    [self.physicsBody applyAngularImpulse:-25];
+    [self.physicsBody applyAngularImpulse:-100];
     [self.physicsBody applyImpulse:CGPointMake(500, 0)];
 }
 
@@ -105,9 +135,8 @@
     if (!self) return (nil);
 
     self = [self initWithImageNamed:@"plane.png"];
-    self.physicsBody = [CCPhysicsBody bodyWithPolylineFromPoints:[self getPoints] count:20 cornerRadius:0 looped:YES];
-    self.physicsBody.type = CCPhysicsBodyTypeDynamic;
-    self.physicsBody.sensor = YES;
+    self.physicsBody = [CCPhysicsBody bodyWithCircleOfRadius:(self.contentSizeInPoints.width / 2) andCenter:self.anchorPointInPoints];
+    self.physicsBody.mass = 10.0;
     self.scale = 0.1;
     
     return self;

@@ -29,7 +29,7 @@
 {
     NSInteger randomNumber = (random() % 100);
     
-    if (randomNumber > 25)
+    if (randomNumber > 10)
     {
         Meteor *meteor = [Meteor node];
     

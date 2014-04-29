@@ -10,6 +10,28 @@
 
 @implementation Meteor
 
+// 정점 리스트
+-(CGPoint *)getVertices
+{
+    return (CGPoint[])
+    {
+        -17.7, 7.6,
+        -1.8, 19.3,
+        9.0, 15.8,
+        16.1, 9.9,
+        19.9, 2.0,
+        20.0, -9.4,
+        15.6, -15.0,
+        5.9, -18.4,
+        -5.3, -18.4,
+        -10.0, -18.5,
+        -14.2, -14.3,
+        -18.2, -8.3,
+        -18.3, -3.1,
+        -18.7, 4.7
+    };
+};
+
 // 아래로 내려오는 경우
 -(void)moveDown
 {
@@ -34,28 +56,6 @@
     
 }
 
-// 정점 리스트
--(CGPoint *)getPoints
-{
-    return (CGPoint[])
-    {
-        -17.7, 7.6,
-        -1.8, 19.3,
-        9.0, 15.8,
-        16.1, 9.9,
-        19.9, 2.0,
-        20.0, -9.4,
-        15.6, -15.0,
-        5.9, -18.4,
-        -5.3, -18.4,
-        -10.0, -18.5,
-        -14.2, -14.3,
-        -18.2, -8.3,
-        -18.3, -3.1,
-        -18.7, 4.7
-    };
-};
-
 // 초기화
 -(id)init
 {
@@ -63,9 +63,7 @@
     if (!self) return (nil);
     
     self = [self initWithImageNamed:@"rock.png"];
-    self.physicsBody = [CCPhysicsBody bodyWithPolylineFromPoints:[self getPoints] count:14 cornerRadius:0 looped:YES];
-    self.physicsBody.type = CCPhysicsBodyTypeDynamic;
-    self.physicsBody.sensor = YES;
+    self.physicsBody = [CCPhysicsBody bodyWithCircleOfRadius:(self.contentSizeInPoints.width / 2) andCenter:self.anchorPointInPoints];
     
     return self;
 }

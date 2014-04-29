@@ -23,7 +23,6 @@
     _player = [Plane node];
     _player.positionType = CCPositionTypeNormalized;
     _player.position = [GameParameters getPlayerInitialPosition];
-    _player.physicsBody.sensor = YES;
     [_physicsNode addChild:_player];
 }
 
@@ -64,15 +63,5 @@
     {
         [_player moveRight];
     }
-}
-
--(void)ccPhysicsCollisionPostSolve:(CCPhysicsCollisionPair *)pair typeA:(CCNode *)nodeA typeB:(CCNode *)nodeB
-{
-    CCLOG(@"COLLISION");
-}
-
--(void)ccPhysicsCollisionSeparate:(CCPhysicsCollisionPair *)pair typeA:(CCNode *)nodeA typeB:(CCNode *)nodeB
-{
-    CCLOG(@"COLLISION");
 }
 @end

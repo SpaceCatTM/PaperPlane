@@ -15,7 +15,7 @@
 #import "SpawnController.h"
 #import "Plane.h"
 
-@interface GameScene : CCScene <CCPhysicsCollisionDelegate>
+@interface GameScene : CCScene
 {
     @private
     Plane *_player;
