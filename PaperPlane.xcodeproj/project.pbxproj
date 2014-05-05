@@ -673,8 +673,8 @@
 		C0AD4AD718FA4628008667F4 /* IntroScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = IntroScene.m; path = Classes/IntroScene.m; sourceTree = "<group>"; };
 		C0D5BF43190004E900174404 /* DisplaySetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisplaySetting.h; sourceTree = "<group>"; };
 		C0D5BF44190004E900174404 /* DisplaySetting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisplaySetting.m; sourceTree = "<group>"; };
-		C0D5BF4D19000FF700174404 /* PlayerEvents.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayerEvents.h; sourceTree = "<group>"; };
-		C0D5BF4E1900100F00174404 /* ObstacleEvents.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObstacleEvents.h; sourceTree = "<group>"; };
+		C0D5BF4D19000FF700174404 /* PlayerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayerDelegate.h; sourceTree = "<group>"; };
+		C0D5BF4E1900100F00174404 /* ObstacleDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObstacleDelegate.h; sourceTree = "<group>"; };
 		C0D5BF501900110400174404 /* Plane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Plane.h; sourceTree = "<group>"; };
 		C0D5BF511900110400174404 /* Plane.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Plane.m; sourceTree = "<group>"; };
 		C0D5BF531900112F00174404 /* Meteor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Meteor.h; sourceTree = "<group>"; };
@@ -702,13 +702,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C0A1D7A818FC2A99000E13EB /* Protocols */ = {
+		C0A1D7A818FC2A99000E13EB /* Delegates */ = {
 			isa = PBXGroup;
 			children = (
-				C0D5BF4D19000FF700174404 /* PlayerEvents.h */,
-				C0D5BF4E1900100F00174404 /* ObstacleEvents.h */,
+				C0D5BF4D19000FF700174404 /* PlayerDelegate.h */,
+				C0D5BF4E1900100F00174404 /* ObstacleDelegate.h */,
 			);
-			name = Protocols;
+			name = Delegates;
 			sourceTree = "<group>";
 		};
 		C0AD481C18FA4623008667F4 = {
@@ -1579,7 +1579,7 @@
 			isa = PBXGroup;
 			children = (
 				C0D5BF4F190010F500174404 /* Objects */,
-				C0A1D7A818FC2A99000E13EB /* Protocols */,
+				C0A1D7A818FC2A99000E13EB /* Delegates */,
 				C0F01BB318FA472A002442C2 /* Settings */,
 				C0F01BB118FA46E1002442C2 /* Scenes */,
 				C0AD4AD018FA4628008667F4 /* AppDelegate.h */,

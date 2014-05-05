@@ -7,9 +7,9 @@
 //
 
 #import "cocos2d.h"
-#import "PlayerEvents.h"
+#import "PlayerDelegate.h"
 #import "GameParameters.h"
 
-@interface Plane : CCSprite <PlayerEvents>
+@interface Plane : CCSprite <PlayerDelegate>
 
 @end

@@ -54,11 +54,11 @@
 {
     if (self.rotation < 0)
     {
-        [self.physicsBody applyAngularImpulse:-10];
+        [self.physicsBody applyAngularImpulse:-100];
     }
     else if (self.rotation > 0)
     {
-        [self.physicsBody applyAngularImpulse:10];
+        [self.physicsBody applyAngularImpulse:100];
     }
 }
 
@@ -103,8 +103,8 @@
 {
     CCLOG(@"moveLeft");
 
-    [self.physicsBody applyAngularImpulse:100];
-    [self.physicsBody applyImpulse:CGPointMake(-500, 0)];
+    [self.physicsBody applyAngularImpulse:[GameParameters getAngularForce]];
+    [self.physicsBody applyImpulse:CGPointMake(-[GameParameters getHorizonalForce], 0)];
 }
 
 // 오른쪽으로 이동하는 경우
@@ -112,8 +112,8 @@
 {
     CCLOG(@"moveRight");
  
-    [self.physicsBody applyAngularImpulse:-100];
-    [self.physicsBody applyImpulse:CGPointMake(500, 0)];
+    [self.physicsBody applyAngularImpulse:-[GameParameters getAngularForce]];
+    [self.physicsBody applyImpulse:CGPointMake([GameParameters getHorizonalForce], 0)];
 }
 
 // 공격을 받았을 경우
@@ -136,7 +136,7 @@
 
     self = [self initWithImageNamed:@"plane.png"];
     self.physicsBody = [CCPhysicsBody bodyWithCircleOfRadius:(self.contentSizeInPoints.width / 2) andCenter:self.anchorPointInPoints];
-    self.physicsBody.mass = 10.0;
+    self.physicsBody.mass = [GameParameters getPlayerMass];
     self.scale = 0.1;
     
     return self;

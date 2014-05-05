@@ -7,8 +7,8 @@
 //
 
 #import "cocos2d.h"
-#import "ObstacleEvents.h"
+#import "ObstacleDelegate.h"
 
-@interface Meteor : CCSprite <ObstacleEvents>
+@interface Meteor : CCSprite <ObstacleDelegate>
 
 @end

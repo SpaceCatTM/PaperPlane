@@ -12,6 +12,8 @@
 @interface GameParameters : NSObject
 
 +(CGPoint) getPlayerInitialPosition;
++(CGFloat) getPlayerMass;
++(CGFloat) getAngularForce;
 +(CGFloat) getVerticalForce;
 +(CGFloat) getHorizonalForce;
 

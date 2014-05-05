@@ -11,7 +11,7 @@
 
 #import "DisplaySetting.h"
 #import "GameParameters.h"
-#import "PlayerEvents.h"
+#import "PlayerDelegate.h"
 #import "SpawnController.h"
 #import "Plane.h"
 
