@@ -8,12 +8,12 @@
 
 #import "GameScene.h"
 
-
 @implementation GameScene
 
 -(void)initPhysics
 {
     _physicsNode = [CCPhysicsNode node];
+    _physicsNode.collisionDelegate = self;
     _physicsNode.contentSize = self.contentSize;
     [self addChild:_physicsNode];
 }
@@ -52,7 +52,7 @@
     return self;
 }
 
--(void) touchBegan:(UITouch *)touch withEvent:(UIEvent *)event {
+-(void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event {
     CGPoint touchLocation = [touch locationInNode:self];
     
     if (touchLocation.x < [DisplaySetting getSize].width / 2)
@@ -64,4 +64,16 @@
         [_player moveRight];
     }
 }
+
+-(BOOL)ccPhysicsCollisionBegin:(CCPhysicsCollisionPair *)pair playerCollision:(CCNode *)player obstacleCollision:(CCNode *)obstacle
+{
+    CCLOG(@"Collision Detected");
+    
+    // 충돌된 장애물을 제거한다.
+    [obstacle removeFromParentAndCleanup:YES];
+    
+    // 리턴 값이 YES면 물리적인 힘을 받고, NO면 물리적인 힘을 받지 않는다.
+    return YES;
+}
+
 @end

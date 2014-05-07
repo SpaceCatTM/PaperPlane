@@ -137,6 +137,7 @@
     self = [self initWithImageNamed:@"plane.png"];
     self.physicsBody = [CCPhysicsBody bodyWithCircleOfRadius:(self.contentSizeInPoints.width / 2) andCenter:self.anchorPointInPoints];
     self.physicsBody.mass = [GameParameters getPlayerMass];
+    self.physicsBody.collisionType = @"playerCollision";
     self.scale = 0.1;
     
     return self;

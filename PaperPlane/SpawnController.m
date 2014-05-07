@@ -39,12 +39,11 @@
         [meteor moveDown];
     }
     
-    for (CCSprite *object in _spawnObjects)
+    for (CCNode *object in self.children)
     {
-        if (object.position.y < 0.0f)
+        if (object.position.y < 0.1f)
         {
             [self removeSpawnObject:object];
-            return;
         }
     }
 }

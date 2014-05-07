@@ -32,6 +32,12 @@
     };
 };
 
+// 충돌 체크
+-(void)onCollision
+{
+    
+}
+
 // 아래로 내려오는 경우
 -(void)moveDown
 {
@@ -64,7 +70,9 @@
     
     self = [self initWithImageNamed:@"rock.png"];
     self.physicsBody = [CCPhysicsBody bodyWithCircleOfRadius:(self.contentSizeInPoints.width / 2) andCenter:self.anchorPointInPoints];
+    self.physicsBody.collisionType = @"obstacleCollision";
     
     return self;
 }
+
 @end
