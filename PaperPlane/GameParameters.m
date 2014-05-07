@@ -25,7 +25,7 @@
 +(CGFloat) getAngularForce
 {
     // 좌/우로 이동할 때 가해질 회전력
-    return 100;
+    return 1.0 * 3430;
 }
 
 +(CGFloat) getVerticalForce
