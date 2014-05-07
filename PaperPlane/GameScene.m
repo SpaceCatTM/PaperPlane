@@ -29,6 +29,7 @@
 -(void)startSpawn
 {
     _spawnController = [SpawnController node];
+    _spawnController.contentSize = self.contentSize;
     [_spawnController startSpawn];
     [_physicsNode addChild:_spawnController];
 }

@@ -13,7 +13,7 @@
 
 -(void)addSpawnObject:(id)object
 {
-    [self.parent addChild:object];
+    [self addChild:object];
 }
 
 -(void)removeSpawnObject:(id)object
@@ -44,6 +44,7 @@
         if (object.position.y < 0.1f)
         {
             [self removeSpawnObject:object];
+            return;
         }
     }
 }
@@ -62,8 +63,6 @@
 {
     self = [super init];
     if (!self) return (nil);
-
-    _spawnObjects = [NSMutableArray new];
     
     return self;
 }
