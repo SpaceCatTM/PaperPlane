@@ -68,8 +68,7 @@
     {
         [self setRotation:45];
     }
-    
-    if(self.rotation <-45)
+    else if(self.rotation <-45)
     {
         [self setRotation:-45];
     }
