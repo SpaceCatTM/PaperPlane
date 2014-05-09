@@ -28,9 +28,9 @@
 
 -(void)startSpawn
 {
-//    _spawnController = [SpawnController node];
-//    [_spawnController startSpawn];
-//    [_physicsNode addChild:_spawnController];
+    _spawnController = [SpawnController node];
+    [_spawnController startSpawn];
+    [_physicsNode addChild:_spawnController];
 }
 
 +(GameScene *)scene
