@@ -15,6 +15,7 @@
 {
     _physicsNode = [CCPhysicsNode node];
     _physicsNode.contentSize = self.contentSize;
+    _physicsNode.collisionDelegate = self;
     [self addChild:_physicsNode];
 }
 
@@ -64,4 +65,16 @@
         [_player moveRight];
     }
 }
+
+-(BOOL)ccPhysicsCollisionBegin:(CCPhysicsCollisionPair *)pair playerCollision:(CCNode *)player obstacleCollision:(CCNode *)obstacle
+{
+    CCLOG(@"Collision Detected");
+    
+    // 충돌된 장애물을 제거한다.
+    [obstacle removeFromParentAndCleanup:YES];
+    
+    // 리턴 값이 YES면 물리적인 힘을 받고, NO면 물리적인 힘을 받지 않는다.
+    return YES;
+}
+
 @end

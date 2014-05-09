@@ -64,6 +64,7 @@
     
     self = [self initWithImageNamed:@"rock.png"];
     self.physicsBody = [CCPhysicsBody bodyWithCircleOfRadius:(self.contentSizeInPoints.width / 2) andCenter:self.anchorPointInPoints];
+    self.physicsBody.collisionType = @"obstacleCollision";
     
     return self;
 }
