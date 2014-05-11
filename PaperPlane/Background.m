@@ -11,17 +11,18 @@
 
 @implementation Background
 
--(void)update:(CCTime)delta
+// 스크롤
+-(void)scroll:(CGFloat)speed
 {
     CGPoint position = self.position;
     
     if (position.y < -1.0f)
     {
-        position.y = 0.0f;
+        position.y += 1.0f;
     }
     else
     {
-        position.y -= 0.005f;
+        position.y -= speed;
     }
     
     self.position = position;
@@ -34,12 +35,12 @@
     if (!self) return (nil);
  
     self.positionType = CCPositionTypeNormalized;
-    self.scale = 0.5;
     self.zOrder = -10;
-
+    self.scale = 0.5;
+    
     CCSprite *bg1 = [[CCSprite alloc] initWithImageNamed:@"mond2.jpg"];
 
-    bg1.anchorPoint = ccp(0.0, -1.025);
+    bg1.anchorPoint = ccp(0.0, -1.0);
     bg1.position = ccp(0.0, 0.0);
     
     [self addChild:bg1];

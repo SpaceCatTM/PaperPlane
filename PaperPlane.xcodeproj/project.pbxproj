@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C023878C191F747D00678B58 /* GameController.m in Sources */ = {isa = PBXBuildFile; fileRef = C023878B191F747D00678B58 /* GameController.m */; };
 		C0412B6E190020F200335712 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = C0412B6D190020F200335712 /* GameScene.m */; };
 		C04AB10A1905601F002246F2 /* GameParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = C04AB1091905601F002246F2 /* GameParameters.m */; };
 		C04AB10C190564BA002246F2 /* Enemy.png in Resources */ = {isa = PBXBuildFile; fileRef = C04AB10B190564BA002246F2 /* Enemy.png */; };
@@ -236,6 +237,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C0238789191F72AA00678B58 /* ScrollDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScrollDelegate.h; sourceTree = "<group>"; };
+		C023878A191F747D00678B58 /* GameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameController.h; sourceTree = "<group>"; };
+		C023878B191F747D00678B58 /* GameController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameController.m; sourceTree = "<group>"; };
 		C0412B6C190020F200335712 /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
 		C0412B6D190020F200335712 /* GameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
 		C04AB1081905601F002246F2 /* GameParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameParameters.h; sourceTree = "<group>"; };
@@ -712,6 +716,7 @@
 			children = (
 				C0D5BF4D19000FF700174404 /* PlayerDelegate.h */,
 				C0D5BF4E1900100F00174404 /* ObstacleDelegate.h */,
+				C0238789191F72AA00678B58 /* ScrollDelegate.h */,
 			);
 			name = Delegates;
 			sourceTree = "<group>";
@@ -1592,6 +1597,8 @@
 				C0AD4AD118FA4628008667F4 /* AppDelegate.m */,
 				C0A44C05190B4F8B008D145E /* SpawnController.h */,
 				C0A44C06190B4F8B008D145E /* SpawnController.m */,
+				C023878A191F747D00678B58 /* GameController.h */,
+				C023878B191F747D00678B58 /* GameController.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -1838,6 +1845,7 @@
 				C0AD491B18FA4625008667F4 /* ccShaders.m in Sources */,
 				C0AD4A2F18FA4627008667F4 /* matrix.c in Sources */,
 				C0AD494118FA4626008667F4 /* CCTiledMapLayer.m in Sources */,
+				C023878C191F747D00678B58 /* GameController.m in Sources */,
 				C0AD4AD518FA4628008667F4 /* HelloWorldScene.m in Sources */,
 				C0AD4A3518FA4627008667F4 /* neon_matrix_impl.c in Sources */,
 				C0AD48BA18FA4624008667F4 /* CCLabelTTF.m in Sources */,

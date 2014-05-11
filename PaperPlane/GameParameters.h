@@ -16,5 +16,6 @@
 +(CGFloat) getAngularForce;
 +(CGFloat) getVerticalForce;
 +(CGFloat) getHorizonalForce;
++(CGFloat) getMaximumScrollSpeed;
 
 @end

@@ -40,4 +40,9 @@
     return 500;
 }
 
++(CGFloat) getMaximumScrollSpeed
+{
+    return 0.012;
+}
+
 @end

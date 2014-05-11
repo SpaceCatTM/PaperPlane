@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
 
-@interface Background : CCSprite
+#import "ScrollDelegate.h"
+
+@interface Background : CCSprite <ScrollDelegate>
 
 @end

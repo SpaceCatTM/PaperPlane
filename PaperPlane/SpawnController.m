@@ -13,13 +13,15 @@
 
 -(void)addSpawnObject:(id)object
 {
+    [_spawnObjects addObject:object];
     [self.parent addChild:object];
 }
 
 -(void)removeSpawnObject:(id)object
 {
-    if ([self.children containsObject:object] == YES)
+    if ([_spawnObjects containsObject:object] == YES)
     {
+        [_spawnObjects removeObject:object];
         [object removeFromParentAndCleanup:YES];
     }
 }
@@ -41,7 +43,7 @@
     
     for (CCSprite *object in _spawnObjects)
     {
-        if (object.position.y < 0.0f && object.physicsBody.velocity.y < 0.1)
+        if (object.position.y < 0.1f)
         {
             [self removeSpawnObject:object];
             return;
@@ -51,7 +53,7 @@
 
 -(void)startSpawn
 {
-    [self schedule:@selector(spawnObject) interval:1.0];
+    [self schedule:@selector(spawnObject) interval:0.7];
 }
 
 -(void)stopSpawn
