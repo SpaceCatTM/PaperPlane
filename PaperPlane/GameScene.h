@@ -21,6 +21,7 @@
     Plane *_player;
     
     @private
+    CCNode *_background;
     CCPhysicsNode *_physicsNode;
     SpawnController *_spawnController;
 }

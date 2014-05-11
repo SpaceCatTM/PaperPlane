@@ -19,6 +19,12 @@
     [self addChild:_physicsNode];
 }
 
+-(void)initAndAddBackground
+{
+    _background = [[CCSprite alloc] initWithImageNamed:@"mond2.jpg"];
+    [self addChild:_background];
+}
+
 -(void)initAndAddPlayer
 {
     _player = [Plane node];
@@ -46,6 +52,7 @@
 
     self.userInteractionEnabled = YES;
     
+    [self initAndAddBackground];
     [self initPhysics];
     [self initAndAddPlayer];
     [self startSpawn];

@@ -221,6 +221,7 @@
 		C0D5BF45190004E900174404 /* DisplaySetting.m in Sources */ = {isa = PBXBuildFile; fileRef = C0D5BF44190004E900174404 /* DisplaySetting.m */; };
 		C0D5BF521900110400174404 /* Plane.m in Sources */ = {isa = PBXBuildFile; fileRef = C0D5BF511900110400174404 /* Plane.m */; };
 		C0D5BF551900112F00174404 /* Meteor.m in Sources */ = {isa = PBXBuildFile; fileRef = C0D5BF541900112F00174404 /* Meteor.m */; };
+		C0FEBA15191F544F00532668 /* mond2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C0FEBA14191F544F00532668 /* mond2.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -679,6 +680,7 @@
 		C0D5BF511900110400174404 /* Plane.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Plane.m; sourceTree = "<group>"; };
 		C0D5BF531900112F00174404 /* Meteor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Meteor.h; sourceTree = "<group>"; };
 		C0D5BF541900112F00174404 /* Meteor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Meteor.m; sourceTree = "<group>"; };
+		C0FEBA14191F544F00532668 /* mond2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mond2.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -759,6 +761,7 @@
 		C0AD484118FA4623008667F4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C0FEBA14191F544F00532668 /* mond2.jpg */,
 				C04AB10F190564C7002246F2 /* plane.png */,
 				C04AB10D190564C0002246F2 /* rock.png */,
 				C04AB10B190564BA002246F2 /* Enemy.png */,
@@ -1717,6 +1720,7 @@
 				C0AD4ACA18FA4628008667F4 /* LICENSE_Chipmunk.txt in Resources */,
 				C0AD486418FA4624008667F4 /* Icon-Spotlight-iOS7@2x.png in Resources */,
 				C04AB110190564C7002246F2 /* plane.png in Resources */,
+				C0FEBA15191F544F00532668 /* mond2.jpg in Resources */,
 				C0AD485418FA4624008667F4 /* Icon-76.png in Resources */,
 				C0AD4A2A18FA4627008667F4 /* ChangeLog in Resources */,
 				C0AD486918FA4624008667F4 /* iTunesArtwork@2x in Resources */,
