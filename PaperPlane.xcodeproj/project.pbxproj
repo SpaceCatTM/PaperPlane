@@ -222,6 +222,7 @@
 		C0D5BF521900110400174404 /* Plane.m in Sources */ = {isa = PBXBuildFile; fileRef = C0D5BF511900110400174404 /* Plane.m */; };
 		C0D5BF551900112F00174404 /* Meteor.m in Sources */ = {isa = PBXBuildFile; fileRef = C0D5BF541900112F00174404 /* Meteor.m */; };
 		C0FEBA15191F544F00532668 /* mond2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C0FEBA14191F544F00532668 /* mond2.jpg */; };
+		C0FEBA18191F59C700532668 /* Background.m in Sources */ = {isa = PBXBuildFile; fileRef = C0FEBA17191F59C700532668 /* Background.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -681,6 +682,8 @@
 		C0D5BF531900112F00174404 /* Meteor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Meteor.h; sourceTree = "<group>"; };
 		C0D5BF541900112F00174404 /* Meteor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Meteor.m; sourceTree = "<group>"; };
 		C0FEBA14191F544F00532668 /* mond2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mond2.jpg; sourceTree = "<group>"; };
+		C0FEBA16191F59C700532668 /* Background.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Background.h; sourceTree = "<group>"; };
+		C0FEBA17191F59C700532668 /* Background.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Background.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1600,6 +1603,8 @@
 				C0D5BF511900110400174404 /* Plane.m */,
 				C0D5BF531900112F00174404 /* Meteor.h */,
 				C0D5BF541900112F00174404 /* Meteor.m */,
+				C0FEBA16191F59C700532668 /* Background.h */,
+				C0FEBA17191F59C700532668 /* Background.m */,
 			);
 			name = Objects;
 			sourceTree = "<group>";
@@ -1767,6 +1772,7 @@
 				C0AD48DA18FA4625008667F4 /* CCParticleExamples.m in Sources */,
 				C0AD4A0C18FA4627008667F4 /* CCSlider.m in Sources */,
 				C0AD494718FA4626008667F4 /* CCTMXXMLParser.m in Sources */,
+				C0FEBA18191F59C700532668 /* Background.m in Sources */,
 				C0AD498718FA4626008667F4 /* CGPointExtension.m in Sources */,
 				C0AD4A1218FA4627008667F4 /* CCTextField.m in Sources */,
 				C0AD497D18FA4626008667F4 /* CCProfiling.m in Sources */,

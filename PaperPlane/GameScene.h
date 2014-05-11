@@ -13,7 +13,9 @@
 #import "GameParameters.h"
 #import "PlayerDelegate.h"
 #import "SpawnController.h"
+
 #import "Plane.h"
+#import "Background.h"
 
 @interface GameScene : CCScene<CCPhysicsCollisionDelegate>
 {

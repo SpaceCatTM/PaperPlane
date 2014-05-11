@@ -41,7 +41,7 @@
     
     for (CCSprite *object in _spawnObjects)
     {
-        if (object.position.y < 0.0f)
+        if (object.position.y < 0.0f && object.physicsBody.velocity.y < 0.1)
         {
             [self removeSpawnObject:object];
             return;

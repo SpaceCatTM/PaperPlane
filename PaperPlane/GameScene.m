@@ -21,7 +21,7 @@
 
 -(void)initAndAddBackground
 {
-    _background = [[CCSprite alloc] initWithImageNamed:@"mond2.jpg"];
+    _background = [Background node];
     [self addChild:_background];
 }
 
@@ -52,15 +52,16 @@
 
     self.userInteractionEnabled = YES;
     
-    [self initAndAddBackground];
     [self initPhysics];
+    [self initAndAddBackground];
     [self initAndAddPlayer];
     [self startSpawn];
     
     return self;
 }
 
--(void) touchBegan:(UITouch *)touch withEvent:(UIEvent *)event {
+-(void) touchBegan:(UITouch *)touch withEvent:(UIEvent *)event
+{
     CGPoint touchLocation = [touch locationInNode:self];
     
     if (touchLocation.x < [DisplaySetting getSize].width / 2)
