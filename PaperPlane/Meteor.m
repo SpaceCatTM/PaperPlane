@@ -40,7 +40,7 @@
     
     self.positionType = CCPositionTypeNormalized;
     self.position = positionFrom;
-    self.scale = 1.0 + ((random() % 150) / 100.0);
+    self.scale = 1.0 + ((random() % 100) / 100.0);
     
     [self runAction:[CCActionMoveTo actionWithDuration:5.0f position:positionTo]];
 }
