@@ -35,13 +35,14 @@
 // 화면이 등장했을 경우
 -(void)spawn
 {
-    CGPoint positionFrom = CGPointMake((random() % 100) / 100.0f, 1.0f);
-    CGPoint positionTo   = CGPointMake(positionFrom.x, -0.1f);
+    CGPoint positionFrom = CGPointMake((random() % 100) / 100.0, 1.0);
+    CGPoint positionTo   = CGPointMake(positionFrom.x, -0.1);
     
     self.positionType = CCPositionTypeNormalized;
     self.position = positionFrom;
+    self.scale = 1.5 + ((random() % 100) / 100.0);
     
-    [self runAction:[CCActionMoveTo actionWithDuration:5.0f position:positionTo]];
+    [self runAction:[CCActionMoveTo actionWithDuration:3.0f position:positionTo]];
 }
 
 // 죽는 경우
