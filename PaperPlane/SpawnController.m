@@ -53,7 +53,7 @@
 
 -(void)startSpawn
 {
-    [self schedule:@selector(spawnObject) interval:0.5];
+    [self schedule:@selector(spawnObject) interval:0.7];
 }
 
 -(void)stopSpawn
