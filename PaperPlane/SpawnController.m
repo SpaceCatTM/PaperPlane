@@ -41,7 +41,7 @@
         [meteor spawn];
     }
     
-    for (CCNode *object in self.children)
+    for (CCNode *object in _spawnObjects)
     {
         if (object.position.y < 0.1f)
         {
