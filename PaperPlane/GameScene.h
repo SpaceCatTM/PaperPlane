@@ -12,16 +12,21 @@
 #import "DisplaySetting.h"
 #import "GameParameters.h"
 #import "PlayerDelegate.h"
+#import "GameController.h"
 #import "SpawnController.h"
+
 #import "Plane.h"
+#import "Background.h"
 
 @interface GameScene : CCScene <CCPhysicsCollisionDelegate>
 {
     @private
-    Plane *_player;
+    Background *_background;
+    Plane      *_player;
     
     @private
-    CCPhysicsNode *_physicsNode;
+    CCPhysicsNode   *_physicsNode;
+    GameController  *_gameController;
     SpawnController *_spawnController;
 }
 

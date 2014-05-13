@@ -15,7 +15,14 @@
     _physicsNode = [CCPhysicsNode node];
     _physicsNode.collisionDelegate = self;
     _physicsNode.contentSize = self.contentSize;
+    _physicsNode.collisionDelegate = self;
     [self addChild:_physicsNode];
+}
+
+-(void)initAndAddBackground
+{
+    _background = [Background node];
+    [self addChild:_background];
 }
 
 -(void)initAndAddPlayer
@@ -26,12 +33,54 @@
     [_physicsNode addChild:_player];
 }
 
--(void)startSpawn
+-(void)initGameController
+{
+    _gameController = [GameController new];
+}
+
+-(void)initSpawnController
 {
     _spawnController = [SpawnController node];
     _spawnController.contentSize = self.contentSize;
     [_spawnController startSpawn];
     [_physicsNode addChild:_spawnController];
+}
+
+-(void)playing
+{
+    // 스크롤 속도 증가
+    if (_gameController.scrollSpeed < [GameParameters getMaximumScrollSpeed])
+    {
+        _gameController.scrollSpeed += 0.001;
+    }
+    
+    // 점수 증가
+    _gameController.score += 10;
+}
+
+-(void)displayScore
+{
+    CCLabelTTF *label;
+    
+    label = [CCLabelTTF labelWithString:[NSString stringWithFormat:@"%ld", (long)_gameController.score]
+                               fontName:@"Chalkduster"
+                               fontSize:36.0f];
+    
+    label.positionType = CCPositionTypeNormalized;
+    label.color = [CCColor redColor];
+    label.position = ccp(0.5f, 0.5f); // Middle of screen
+    
+    [self addChild:label];
+}
+
+-(void)gameOver
+{
+    _gameController.scrollSpeed = 0;
+    _gameController.isGameOver = YES;
+    
+    [_physicsNode removeChild:_player];
+    
+    [self displayScore];
 }
 
 +(GameScene *)scene
@@ -47,8 +96,12 @@
     self.userInteractionEnabled = YES;
     
     [self initPhysics];
+    [self initAndAddBackground];
     [self initAndAddPlayer];
-    [self startSpawn];
+    [self initGameController];
+    [self initSpawnController];
+    
+    [self schedule:@selector(playing) interval:2.0];
     
     return self;
 }

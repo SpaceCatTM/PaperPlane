@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C023878C191F747D00678B58 /* GameController.m in Sources */ = {isa = PBXBuildFile; fileRef = C023878B191F747D00678B58 /* GameController.m */; };
 		C0412B6E190020F200335712 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = C0412B6D190020F200335712 /* GameScene.m */; };
 		C04AB10A1905601F002246F2 /* GameParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = C04AB1091905601F002246F2 /* GameParameters.m */; };
 		C04AB10C190564BA002246F2 /* Enemy.png in Resources */ = {isa = PBXBuildFile; fileRef = C04AB10B190564BA002246F2 /* Enemy.png */; };
@@ -221,6 +222,8 @@
 		C0D5BF45190004E900174404 /* DisplaySetting.m in Sources */ = {isa = PBXBuildFile; fileRef = C0D5BF44190004E900174404 /* DisplaySetting.m */; };
 		C0D5BF521900110400174404 /* Plane.m in Sources */ = {isa = PBXBuildFile; fileRef = C0D5BF511900110400174404 /* Plane.m */; };
 		C0D5BF551900112F00174404 /* Meteor.m in Sources */ = {isa = PBXBuildFile; fileRef = C0D5BF541900112F00174404 /* Meteor.m */; };
+		C0FEBA15191F544F00532668 /* mond2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C0FEBA14191F544F00532668 /* mond2.jpg */; };
+		C0FEBA18191F59C700532668 /* Background.m in Sources */ = {isa = PBXBuildFile; fileRef = C0FEBA17191F59C700532668 /* Background.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -234,6 +237,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C0238789191F72AA00678B58 /* ScrollDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScrollDelegate.h; sourceTree = "<group>"; };
+		C023878A191F747D00678B58 /* GameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameController.h; sourceTree = "<group>"; };
+		C023878B191F747D00678B58 /* GameController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameController.m; sourceTree = "<group>"; };
 		C0412B6C190020F200335712 /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
 		C0412B6D190020F200335712 /* GameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
 		C04AB1081905601F002246F2 /* GameParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameParameters.h; sourceTree = "<group>"; };
@@ -679,6 +685,9 @@
 		C0D5BF511900110400174404 /* Plane.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Plane.m; sourceTree = "<group>"; };
 		C0D5BF531900112F00174404 /* Meteor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Meteor.h; sourceTree = "<group>"; };
 		C0D5BF541900112F00174404 /* Meteor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Meteor.m; sourceTree = "<group>"; };
+		C0FEBA14191F544F00532668 /* mond2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mond2.jpg; sourceTree = "<group>"; };
+		C0FEBA16191F59C700532668 /* Background.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Background.h; sourceTree = "<group>"; };
+		C0FEBA17191F59C700532668 /* Background.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Background.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -707,6 +716,7 @@
 			children = (
 				C0D5BF4D19000FF700174404 /* PlayerDelegate.h */,
 				C0D5BF4E1900100F00174404 /* ObstacleDelegate.h */,
+				C0238789191F72AA00678B58 /* ScrollDelegate.h */,
 			);
 			name = Delegates;
 			sourceTree = "<group>";
@@ -759,6 +769,7 @@
 		C0AD484118FA4623008667F4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C0FEBA14191F544F00532668 /* mond2.jpg */,
 				C04AB10F190564C7002246F2 /* plane.png */,
 				C04AB10D190564C0002246F2 /* rock.png */,
 				C04AB10B190564BA002246F2 /* Enemy.png */,
@@ -1586,6 +1597,8 @@
 				C0AD4AD118FA4628008667F4 /* AppDelegate.m */,
 				C0A44C05190B4F8B008D145E /* SpawnController.h */,
 				C0A44C06190B4F8B008D145E /* SpawnController.m */,
+				C023878A191F747D00678B58 /* GameController.h */,
+				C023878B191F747D00678B58 /* GameController.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -1597,6 +1610,8 @@
 				C0D5BF511900110400174404 /* Plane.m */,
 				C0D5BF531900112F00174404 /* Meteor.h */,
 				C0D5BF541900112F00174404 /* Meteor.m */,
+				C0FEBA16191F59C700532668 /* Background.h */,
+				C0FEBA17191F59C700532668 /* Background.m */,
 			);
 			name = Objects;
 			sourceTree = "<group>";
@@ -1717,6 +1732,7 @@
 				C0AD4ACA18FA4628008667F4 /* LICENSE_Chipmunk.txt in Resources */,
 				C0AD486418FA4624008667F4 /* Icon-Spotlight-iOS7@2x.png in Resources */,
 				C04AB110190564C7002246F2 /* plane.png in Resources */,
+				C0FEBA15191F544F00532668 /* mond2.jpg in Resources */,
 				C0AD485418FA4624008667F4 /* Icon-76.png in Resources */,
 				C0AD4A2A18FA4627008667F4 /* ChangeLog in Resources */,
 				C0AD486918FA4624008667F4 /* iTunesArtwork@2x in Resources */,
@@ -1763,6 +1779,7 @@
 				C0AD48DA18FA4625008667F4 /* CCParticleExamples.m in Sources */,
 				C0AD4A0C18FA4627008667F4 /* CCSlider.m in Sources */,
 				C0AD494718FA4626008667F4 /* CCTMXXMLParser.m in Sources */,
+				C0FEBA18191F59C700532668 /* Background.m in Sources */,
 				C0AD498718FA4626008667F4 /* CGPointExtension.m in Sources */,
 				C0AD4A1218FA4627008667F4 /* CCTextField.m in Sources */,
 				C0AD497D18FA4626008667F4 /* CCProfiling.m in Sources */,
@@ -1828,6 +1845,7 @@
 				C0AD491B18FA4625008667F4 /* ccShaders.m in Sources */,
 				C0AD4A2F18FA4627008667F4 /* matrix.c in Sources */,
 				C0AD494118FA4626008667F4 /* CCTiledMapLayer.m in Sources */,
+				C023878C191F747D00678B58 /* GameController.m in Sources */,
 				C0AD4AD518FA4628008667F4 /* HelloWorldScene.m in Sources */,
 				C0AD4A3518FA4627008667F4 /* neon_matrix_impl.c in Sources */,
 				C0AD48BA18FA4624008667F4 /* CCLabelTTF.m in Sources */,

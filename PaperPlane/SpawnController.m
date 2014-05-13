@@ -18,8 +18,9 @@
 
 -(void)removeSpawnObject:(id)object
 {
-    if ([self.children containsObject:object] == YES)
+    if ([_spawnObjects containsObject:object] == YES)
     {
+        [_spawnObjects removeObject:object];
         [object removeFromParentAndCleanup:YES];
     }
 }
@@ -51,7 +52,7 @@
 
 -(void)startSpawn
 {
-    [self schedule:@selector(spawnObject) interval:1.0];
+    [self schedule:@selector(spawnObject) interval:0.7];
 }
 
 -(void)stopSpawn

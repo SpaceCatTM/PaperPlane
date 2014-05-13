@@ -54,11 +54,23 @@
 {
     if (self.rotation < 0)
     {
-        [self.physicsBody applyAngularImpulse:-100];
+        
+        //[self.physicsBody applyAngularImpulse:-100];
+        [self setRotation:self.rotation+1];
     }
     else if (self.rotation > 0)
     {
-        [self.physicsBody applyAngularImpulse:100];
+        //[self.physicsBody applyAngularImpulse:100];
+        [self setRotation:self.rotation-1];
+    }
+    
+    if(self.rotation >45)
+    {
+        [self setRotation:45];
+    }
+    else if(self.rotation <-45)
+    {
+        [self setRotation:-45];
     }
 }
 
@@ -102,18 +114,41 @@
 -(void)moveLeft;
 {
     CCLOG(@"moveLeft");
+ 
+      if(self.rotation >0)
+      {
+          [self runAction:[CCActionRotateBy actionWithDuration:0.3f angle:-self.rotation - 22.5f]];
+      }
+      else
+      {
+          [self runAction:[CCActionRotateBy actionWithDuration:0.3f angle:self.rotation - 22.5f]];
+      }
+    
+    
+    NSLog(@"self.ro1 : %f",self.rotation);
 
-    [self.physicsBody applyAngularImpulse:[GameParameters getAngularForce]];
-    [self.physicsBody applyImpulse:CGPointMake(-[GameParameters getHorizonalForce], 0)];
+   [self.physicsBody applyImpulse:CGPointMake(-[GameParameters getHorizonalForce], 0)];
 }
 
 // 오른쪽으로 이동하는 경우
 -(void)moveRight
 {
     CCLOG(@"moveRight");
- 
-    [self.physicsBody applyAngularImpulse:-[GameParameters getAngularForce]];
+    
+    if(self.rotation <0)
+    {
+        [self runAction:[CCActionRotateBy actionWithDuration:0.3f angle:-self.rotation + 22.5f]];
+    }
+    else
+    {
+        [self runAction:[CCActionRotateBy actionWithDuration:0.3f angle:self.rotation + 22.5f]];
+    }
+    
+    
+     NSLog(@"self.ro1 : %f",self.rotation);
     [self.physicsBody applyImpulse:CGPointMake([GameParameters getHorizonalForce], 0)];
+    
+
 }
 
 // 공격을 받았을 경우
