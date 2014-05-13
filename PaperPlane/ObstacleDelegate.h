@@ -10,13 +10,7 @@
 
 @protocol ObstacleDelegate
 
-// 아래로 내려오는 경우
--(void)moveDown;
-
-// 공격 하는 경우
--(void)attack;
-
-// 죽는 경우
+-(void)spawn;
 -(void)dead;
 
 @end

@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		C023878C191F747D00678B58 /* GameController.m in Sources */ = {isa = PBXBuildFile; fileRef = C023878B191F747D00678B58 /* GameController.m */; };
 		C0412B6E190020F200335712 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = C0412B6D190020F200335712 /* GameScene.m */; };
-		C04AB10A1905601F002246F2 /* GameParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = C04AB1091905601F002246F2 /* GameParameters.m */; };
+		C04AB10A1905601F002246F2 /* GameSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = C04AB1091905601F002246F2 /* GameSetting.m */; };
 		C04AB10C190564BA002246F2 /* Enemy.png in Resources */ = {isa = PBXBuildFile; fileRef = C04AB10B190564BA002246F2 /* Enemy.png */; };
 		C04AB10E190564C0002246F2 /* rock.png in Resources */ = {isa = PBXBuildFile; fileRef = C04AB10D190564C0002246F2 /* rock.png */; };
 		C04AB110190564C7002246F2 /* plane.png in Resources */ = {isa = PBXBuildFile; fileRef = C04AB10F190564C7002246F2 /* plane.png */; };
@@ -242,8 +242,8 @@
 		C023878B191F747D00678B58 /* GameController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameController.m; sourceTree = "<group>"; };
 		C0412B6C190020F200335712 /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
 		C0412B6D190020F200335712 /* GameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
-		C04AB1081905601F002246F2 /* GameParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameParameters.h; sourceTree = "<group>"; };
-		C04AB1091905601F002246F2 /* GameParameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameParameters.m; sourceTree = "<group>"; };
+		C04AB1081905601F002246F2 /* GameSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameSetting.h; sourceTree = "<group>"; };
+		C04AB1091905601F002246F2 /* GameSetting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameSetting.m; sourceTree = "<group>"; };
 		C04AB10B190564BA002246F2 /* Enemy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Enemy.png; sourceTree = "<group>"; };
 		C04AB10D190564C0002246F2 /* rock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rock.png; sourceTree = "<group>"; };
 		C04AB10F190564C7002246F2 /* plane.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plane.png; sourceTree = "<group>"; };
@@ -1634,8 +1634,8 @@
 			children = (
 				C0D5BF43190004E900174404 /* DisplaySetting.h */,
 				C0D5BF44190004E900174404 /* DisplaySetting.m */,
-				C04AB1081905601F002246F2 /* GameParameters.h */,
-				C04AB1091905601F002246F2 /* GameParameters.m */,
+				C04AB1081905601F002246F2 /* GameSetting.h */,
+				C04AB1091905601F002246F2 /* GameSetting.m */,
 			);
 			name = Settings;
 			sourceTree = "<group>";
@@ -1849,7 +1849,7 @@
 				C0AD4AD518FA4628008667F4 /* HelloWorldScene.m in Sources */,
 				C0AD4A3518FA4627008667F4 /* neon_matrix_impl.c in Sources */,
 				C0AD48BA18FA4624008667F4 /* CCLabelTTF.m in Sources */,
-				C04AB10A1905601F002246F2 /* GameParameters.m in Sources */,
+				C04AB10A1905601F002246F2 /* GameSetting.m in Sources */,
 				C0AD496F18FA4626008667F4 /* NSEvent+CC.m in Sources */,
 				C0AD49CC18FA4626008667F4 /* ALDevice.m in Sources */,
 				C0AD4A3F18FA4627008667F4 /* vec2.c in Sources */,

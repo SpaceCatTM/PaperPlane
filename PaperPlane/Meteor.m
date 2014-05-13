@@ -32,14 +32,8 @@
     };
 };
 
-// 충돌 체크
--(void)onCollision
-{
-    
-}
-
-// 아래로 내려오는 경우
--(void)moveDown
+// 화면이 등장했을 경우
+-(void)spawn
 {
     CGPoint positionFrom = CGPointMake((random() % 100) / 100.0f, 1.0f);
     CGPoint positionTo   = CGPointMake(positionFrom.x, -0.1f);
@@ -50,16 +44,10 @@
     [self runAction:[CCActionMoveTo actionWithDuration:5.0f position:positionTo]];
 }
 
-// 공격하는 경우
--(void)attack
-{
-    
-}
-
 // 죽는 경우
 -(void)dead
 {
-    
+    return;
 }
 
 // 초기화

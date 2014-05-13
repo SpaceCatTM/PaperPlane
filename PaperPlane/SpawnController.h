@@ -10,6 +10,10 @@
 #import "cocos2d.h"
 
 @interface SpawnController : CCNode
+{
+    @private
+    NSMutableArray *_spawnObjects;
+}
 
 -(void)startSpawn;
 -(void)stopSpawn;

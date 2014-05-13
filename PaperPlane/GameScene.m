@@ -15,7 +15,6 @@
     _physicsNode = [CCPhysicsNode node];
     _physicsNode.collisionDelegate = self;
     _physicsNode.contentSize = self.contentSize;
-    _physicsNode.collisionDelegate = self;
     [self addChild:_physicsNode];
 }
 
@@ -29,7 +28,7 @@
 {
     _player = [Plane node];
     _player.positionType = CCPositionTypeNormalized;
-    _player.position = [GameParameters getPlayerInitialPosition];
+    _player.position = GameSetting.playerInitialPosition;
     [_physicsNode addChild:_player];
 }
 
@@ -48,14 +47,17 @@
 
 -(void)playing
 {
-    // 스크롤 속도 증가
-    if (_gameController.scrollSpeed < [GameParameters getMaximumScrollSpeed])
+    if (_gameController.isGameOver == NO)
     {
-        _gameController.scrollSpeed += 0.001;
-    }
+        // 스크롤 속도 증가
+        if (_gameController.scrollSpeed < GameSetting.maximumScrollSpeed)
+        {
+            _gameController.scrollSpeed += 0.001;
+        }
     
-    // 점수 증가
-    _gameController.score += 10;
+        // 점수 증가
+        _gameController.score += 10;
+    }
 }
 
 -(void)displayScore
@@ -106,25 +108,45 @@
     return self;
 }
 
--(void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event {
+-(void)update:(CCTime)delta
+{
+    if (_gameController.isGameOver == NO)
+    {
+        // 게임 스크롤
+        [_background scroll:_gameController.scrollSpeed];
+    }
+}
+
+-(void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event
+{
     CGPoint touchLocation = [touch locationInNode:self];
     
-    if (touchLocation.x < [DisplaySetting getSize].width / 2)
+    if (_gameController.isGameOver == NO)
     {
-        [_player moveLeft];
-    }
-    else
-    {
-        [_player moveRight];
+        if (touchLocation.x < [DisplaySetting getSize].width / 2)
+        {
+            [_player moveLeft];
+        }
+        else
+        {
+            [_player moveRight];
+        }
     }
 }
 
 -(BOOL)ccPhysicsCollisionBegin:(CCPhysicsCollisionPair *)pair playerCollision:(CCNode *)player obstacleCollision:(CCNode *)obstacle
 {
-    CCLOG(@"Collision Detected");
-    
     // 충돌된 장애물을 제거한다.
     [obstacle removeFromParentAndCleanup:YES];
+    
+    // 스크롤 속도 감소
+    _gameController.scrollSpeed -= GameSetting.decraseScrollSpeedOnCollision;
+    
+    // 스크롤 속도가 0 이하가 되면 게임 오버
+    if (_gameController.scrollSpeed < 0)
+    {
+        [self gameOver];
+    }
     
     // 리턴 값이 YES면 물리적인 힘을 받고, NO면 물리적인 힘을 받지 않는다.
     return YES;

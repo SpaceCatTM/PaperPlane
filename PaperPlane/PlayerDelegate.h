@@ -10,16 +10,9 @@
 
 @protocol PlayerDelegate
 
-// 죄로 움직이는 경우
 -(void)moveLeft;
-
-// 위로 움직이는 경우
 -(void)moveRight;
-
-// 데미지를 받는 경우
 -(void)getDamage;
-
-// 죽는 경우
 -(void)dead;
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "Plane.h"
+#import "GameSetting.h"
 
 @implementation Plane
 
@@ -54,17 +55,14 @@
 {
     if (self.rotation < 0)
     {
-        
-        //[self.physicsBody applyAngularImpulse:-100];
-        [self setRotation:self.rotation+1];
+        [self setRotation:self.rotation + 1];
     }
     else if (self.rotation > 0)
     {
-        //[self.physicsBody applyAngularImpulse:100];
-        [self setRotation:self.rotation-1];
+        [self setRotation:self.rotation - 1];
     }
     
-    if(self.rotation >45)
+    if (self.rotation >45)
     {
         [self setRotation:45];
     }
@@ -90,7 +88,7 @@
 
 -(void)controlVerticalPosition
 {
-    CGFloat initialPosition = [GameParameters getPlayerInitialPosition].y;
+    CGFloat initialPosition = GameSetting.playerInitialPosition.y;
     
     if (self.position.y < initialPosition)
     {
@@ -115,19 +113,16 @@
 {
     CCLOG(@"moveLeft");
  
-      if(self.rotation >0)
-      {
-          [self runAction:[CCActionRotateBy actionWithDuration:0.3f angle:-self.rotation - 22.5f]];
-      }
-      else
-      {
-          [self runAction:[CCActionRotateBy actionWithDuration:0.3f angle:self.rotation - 22.5f]];
-      }
+    if (self.rotation > 0)
+    {
+        [self runAction:[CCActionRotateBy actionWithDuration:0.3f angle:-self.rotation - 22.5f]];
+    }
+    else
+    {
+        [self runAction:[CCActionRotateBy actionWithDuration:0.3f angle:self.rotation - 22.5f]];
+    }
     
-    
-    NSLog(@"self.ro1 : %f",self.rotation);
-
-   [self.physicsBody applyImpulse:CGPointMake(-[GameParameters getHorizonalForce], 0)];
+    [self.physicsBody applyImpulse:CGPointMake(-GameSetting.horizonalForce, 0)];
 }
 
 // 오른쪽으로 이동하는 경우
@@ -135,7 +130,7 @@
 {
     CCLOG(@"moveRight");
     
-    if(self.rotation <0)
+    if (self.rotation < 0)
     {
         [self runAction:[CCActionRotateBy actionWithDuration:0.3f angle:-self.rotation + 22.5f]];
     }
@@ -144,23 +139,19 @@
         [self runAction:[CCActionRotateBy actionWithDuration:0.3f angle:self.rotation + 22.5f]];
     }
     
-    
-     NSLog(@"self.ro1 : %f",self.rotation);
-    [self.physicsBody applyImpulse:CGPointMake([GameParameters getHorizonalForce], 0)];
-    
-
+    [self.physicsBody applyImpulse:CGPointMake(GameSetting.horizonalForce, 0)];
 }
 
 // 공격을 받았을 경우
 -(void)getDamage
 {
-
+    return;
 }
 
 // 죽는 경우
 -(void)dead
 {
-
+    return;
 }
 
 // 초기화
@@ -171,7 +162,7 @@
 
     self = [self initWithImageNamed:@"plane.png"];
     self.physicsBody = [CCPhysicsBody bodyWithCircleOfRadius:(self.contentSizeInPoints.width / 2) andCenter:self.anchorPointInPoints];
-    self.physicsBody.mass = [GameParameters getPlayerMass];
+    self.physicsBody.mass = GameSetting.playerMass;
     self.physicsBody.collisionType = @"playerCollision";
     self.scale = 0.1;
     

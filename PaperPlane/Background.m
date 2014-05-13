@@ -36,11 +36,21 @@
  
     self.positionType = CCPositionTypeNormalized;
     self.zOrder = -10;
-    self.scale = 0.5;
+    
+    if (DisplaySetting.isWide == YES)
+    {
+        self.scaleX = 0.5;
+        self.scaleY = 0.5;
+    }
+    else
+    {
+        self.scaleX = 0.5;
+        self.scaleY = 0.5 * (960.0 / 1136.0);
+    }
     
     CCSprite *bg1 = [[CCSprite alloc] initWithImageNamed:@"mond2.jpg"];
 
-    bg1.anchorPoint = ccp(0.0, -1.0);
+    bg1.anchorPoint = ccp(0.0, -1.015);
     bg1.position = ccp(0.0, 0.0);
     
     [self addChild:bg1];

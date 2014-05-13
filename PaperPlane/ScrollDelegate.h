@@ -10,7 +10,6 @@
 
 @protocol ScrollDelegate <NSObject>
 
-// 스크롤
 -(void)scroll:(CGFloat)speed;
 
 @end

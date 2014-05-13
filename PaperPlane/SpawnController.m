@@ -13,7 +13,8 @@
 
 -(void)addSpawnObject:(id)object
 {
-    [self addChild:object];
+    [_spawnObjects addObject:object];
+    [self.parent addChild:object];
 }
 
 -(void)removeSpawnObject:(id)object
@@ -36,8 +37,8 @@
         // 객체를 리스트에 추가한다.
         [self addSpawnObject:meteor];
         
-        // 객체를 화면에서 내려오도록 한다.
-        [meteor moveDown];
+        // 객체를 화면에 표시했을 때 이벤트를 실행한다.
+        [meteor spawn];
     }
     
     for (CCNode *object in self.children)
@@ -45,7 +46,6 @@
         if (object.position.y < 0.1f)
         {
             [self removeSpawnObject:object];
-            return;
         }
     }
 }
