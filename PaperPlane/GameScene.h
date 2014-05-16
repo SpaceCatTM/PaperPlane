@@ -12,8 +12,6 @@
 #import "DisplaySetting.h"
 #import "GameSetting.h"
 
-#import "PlayerDelegate.h"
-
 #import "GameController.h"
 #import "SpawnController.h"
 

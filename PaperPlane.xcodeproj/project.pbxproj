@@ -13,6 +13,7 @@
 		C04AB10C190564BA002246F2 /* Enemy.png in Resources */ = {isa = PBXBuildFile; fileRef = C04AB10B190564BA002246F2 /* Enemy.png */; };
 		C04AB10E190564C0002246F2 /* rock.png in Resources */ = {isa = PBXBuildFile; fileRef = C04AB10D190564C0002246F2 /* rock.png */; };
 		C04AB110190564C7002246F2 /* plane.png in Resources */ = {isa = PBXBuildFile; fileRef = C04AB10F190564C7002246F2 /* plane.png */; };
+		C05EDA9A192683A7004F99AD /* GameOver.m in Sources */ = {isa = PBXBuildFile; fileRef = C05EDA99192683A7004F99AD /* GameOver.m */; };
 		C0A44C07190B4F8B008D145E /* SpawnController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0A44C06190B4F8B008D145E /* SpawnController.m */; };
 		C0AD482918FA4623008667F4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0AD482818FA4623008667F4 /* QuartzCore.framework */; };
 		C0AD482B18FA4623008667F4 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0AD482A18FA4623008667F4 /* OpenGLES.framework */; };
@@ -247,6 +248,8 @@
 		C04AB10B190564BA002246F2 /* Enemy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Enemy.png; sourceTree = "<group>"; };
 		C04AB10D190564C0002246F2 /* rock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rock.png; sourceTree = "<group>"; };
 		C04AB10F190564C7002246F2 /* plane.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plane.png; sourceTree = "<group>"; };
+		C05EDA98192683A7004F99AD /* GameOver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOver.h; sourceTree = "<group>"; };
+		C05EDA99192683A7004F99AD /* GameOver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameOver.m; sourceTree = "<group>"; };
 		C0A44C05190B4F8B008D145E /* SpawnController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpawnController.h; sourceTree = "<group>"; };
 		C0A44C06190B4F8B008D145E /* SpawnController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpawnController.m; sourceTree = "<group>"; };
 		C0AD482518FA4623008667F4 /* PaperPlane.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaperPlane.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1612,6 +1615,8 @@
 				C0D5BF541900112F00174404 /* Meteor.m */,
 				C0FEBA16191F59C700532668 /* Background.h */,
 				C0FEBA17191F59C700532668 /* Background.m */,
+				C05EDA98192683A7004F99AD /* GameOver.h */,
+				C05EDA99192683A7004F99AD /* GameOver.m */,
 			);
 			name = Objects;
 			sourceTree = "<group>";
@@ -1749,6 +1754,7 @@
 				C0AD48D718FA4625008667F4 /* CCParticleBatchNode.m in Sources */,
 				C0AD4A4F18FA4627008667F4 /* CCBReader.m in Sources */,
 				C0AD49FF18FA4627008667F4 /* CCButton.m in Sources */,
+				C05EDA9A192683A7004F99AD /* GameOver.m in Sources */,
 				C0AD49AA18FA4626008667F4 /* OALAudioActions.m in Sources */,
 				C0AD49EF18FA4627008667F4 /* NSMutableArray+WeakReferences.m in Sources */,
 				C0AD496918FA4626008667F4 /* CCGLView.m in Sources */,

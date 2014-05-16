@@ -7,6 +7,7 @@
 //
 
 #import "GameScene.h"
+#import "GameOver.h"
 
 @implementation GameScene
 
@@ -60,29 +61,14 @@
     }
 }
 
--(void)displayScore
-{
-    CCLabelTTF *label;
-    
-    label = [CCLabelTTF labelWithString:[NSString stringWithFormat:@"%ld", (long)_gameController.score]
-                               fontName:@"Chalkduster"
-                               fontSize:36.0f];
-    
-    label.positionType = CCPositionTypeNormalized;
-    label.color = [CCColor redColor];
-    label.position = ccp(0.5f, 0.5f); // Middle of screen
-    
-    [self addChild:label];
-}
-
 -(void)gameOver
 {
     _gameController.scrollSpeed = 0;
     _gameController.isGameOver = YES;
-    
+   
     [_physicsNode removeChild:_player];
     
-    [self displayScore];
+    [self addChild:[[GameOver alloc] initWithScore:_gameController.score]];
 }
 
 +(GameScene *)scene
