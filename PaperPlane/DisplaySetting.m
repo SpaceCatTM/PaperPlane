@@ -20,7 +20,7 @@
 // 기기가 3.5인치보다 크면 YES, 그렇지 않으면 NO를 리턴한다.
 +(BOOL)isWide
 {
-    if ([DisplaySetting getSize].width == 568.0)
+    if ([DisplaySetting getSize].height == 568.0)
     {
         return YES;
     }
