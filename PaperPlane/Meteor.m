@@ -35,7 +35,7 @@
 // 화면이 등장했을 경우
 -(void)spawn
 {
-    CGPoint positionFrom = CGPointMake((random() % 100) / 100.0, 1.0);
+    CGPoint positionFrom = CGPointMake((arc4random() % 100) / 100.0, 1.0);
     CGPoint positionTo   = CGPointMake(positionFrom.x, -0.1);
     
     self.positionType = CCPositionTypeNormalized;

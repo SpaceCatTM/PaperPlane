@@ -28,7 +28,7 @@
 
 -(void)spawnObject
 {
-    NSInteger randomNumber = (random() % 100);
+    NSInteger randomNumber = (arc4random() % 100);
     
     if (randomNumber > 10)
     {
@@ -53,7 +53,7 @@
 
 -(void)startSpawn
 {
-    [self schedule:@selector(spawnObject) interval:0.7];
+    [self schedule:@selector(spawnObject) interval:0.5];
 }
 
 -(void)stopSpawn
