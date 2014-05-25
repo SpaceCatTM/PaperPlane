@@ -18,5 +18,9 @@
 +(CGFloat) horizonalForce;
 +(CGFloat) maximumScrollSpeed;
 +(CGFloat) decraseScrollSpeedOnCollision;
++(CGFloat) meteorSpeed;
++(CGFloat) bombSpeed;
++(CGFloat) windSpeed;
++(CGPoint) windForce;
 
 @end

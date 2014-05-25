@@ -13,5 +13,9 @@
 @property(nonatomic, assign) bool      isGameOver;
 @property(nonatomic, assign) CGFloat   scrollSpeed;
 @property(nonatomic, assign) NSInteger score;
+@property(nonatomic, assign) CGPoint   windDirection;
+
+-(void)Reset;
++(GameController *)sharedInstance;
 
 @end

@@ -16,11 +16,29 @@
     self = [super init];
     if (!self) return (nil);
     
+    [self Reset];
+    
+    return self;
+}
+
+static GameController *_instance = NULL;
+
+-(void)Reset
+{
     self.isGameOver = NO;
     self.score = 0;
     self.scrollSpeed = GameSetting.maximumScrollSpeed * 0.7;
-    
-    return self;
+    self.windDirection = ccp(0.0, 0.0);
+}
+
++(GameController *)sharedInstance
+{
+    if (_instance == NULL)
+    {
+        _instance = [GameController new];
+    }
+
+    return _instance;
 }
 
 @end

@@ -10,7 +10,14 @@
 
 @protocol ObstacleDelegate
 
--(void)spawn;
+@property(nonatomic, assign) CGFloat speed;
+@property(nonatomic, assign) CGFloat weight;
+
+@property(nonatomic, assign) BOOL isIgnoreWind;
+@property(nonatomic, assign) BOOL isIgnoreScroll;
+
+-(void)spawn:(CGPoint)position;
+-(void)move;
 -(void)dead;
 
 @end

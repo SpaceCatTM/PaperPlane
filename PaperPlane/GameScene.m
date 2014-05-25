@@ -9,6 +9,8 @@
 #import "GameScene.h"
 #import "GameOver.h"
 
+#import "Wind.h"
+
 @implementation GameScene
 
 -(void)initPhysics
@@ -35,7 +37,7 @@
 
 -(void)initGameController
 {
-    _gameController = [GameController new];
+    _gameController = [GameController sharedInstance];
 }
 
 -(void)initSpawnController
@@ -136,6 +138,26 @@
     
     // 리턴 값이 YES면 물리적인 힘을 받고, NO면 물리적인 힘을 받지 않는다.
     return YES;
+}
+
+-(BOOL)ccPhysicsCollisionBegin:(CCPhysicsCollisionPair *)pair windCollision:(Wind *)wind obstacleCollision:(CCNode *)obstacle
+{
+    // 바람 충돌
+    if (wind.speed > 0)
+    {
+        // 부딫히는 물체에 물리 힘을 준다.
+        [obstacle.physicsBody applyImpulse:[GameSetting windForce]];
+    }
+    else if (wind.speed < 0)
+    {
+        // 부딫히는 물체에 물리 힘을 준다.
+        [obstacle.physicsBody applyImpulse:ccpMult([GameSetting windForce], -1.0f)];
+    }
+
+    CCLOG(@"WIND");
+    
+    // 리턴 값이 YES면 물리적인 힘을 받고, NO면 물리적인 힘을 받지 않는다.
+    return NO;
 }
 
 @end

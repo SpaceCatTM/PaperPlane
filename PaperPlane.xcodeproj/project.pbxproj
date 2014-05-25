@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C00692E6193190D5003DB62A /* Bomb.m in Sources */ = {isa = PBXBuildFile; fileRef = C00692E5193190D5003DB62A /* Bomb.m */; };
+		C00692E91931B061003DB62A /* Wind.m in Sources */ = {isa = PBXBuildFile; fileRef = C00692E81931B061003DB62A /* Wind.m */; };
+		C00692EC1931B3A5003DB62A /* Tree.m in Sources */ = {isa = PBXBuildFile; fileRef = C00692EB1931B3A5003DB62A /* Tree.m */; };
+		C00692EE1931B3E9003DB62A /* tree.png in Resources */ = {isa = PBXBuildFile; fileRef = C00692ED1931B3E9003DB62A /* tree.png */; };
+		C00692F01931B653003DB62A /* wind.png in Resources */ = {isa = PBXBuildFile; fileRef = C00692EF1931B653003DB62A /* wind.png */; };
 		C023878C191F747D00678B58 /* GameController.m in Sources */ = {isa = PBXBuildFile; fileRef = C023878B191F747D00678B58 /* GameController.m */; };
 		C0412B6E190020F200335712 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = C0412B6D190020F200335712 /* GameScene.m */; };
 		C04AB10A1905601F002246F2 /* GameSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = C04AB1091905601F002246F2 /* GameSetting.m */; };
@@ -238,6 +243,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C00692E4193190D5003DB62A /* Bomb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bomb.h; sourceTree = "<group>"; };
+		C00692E5193190D5003DB62A /* Bomb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bomb.m; sourceTree = "<group>"; };
+		C00692E71931B061003DB62A /* Wind.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Wind.h; sourceTree = "<group>"; };
+		C00692E81931B061003DB62A /* Wind.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Wind.m; sourceTree = "<group>"; };
+		C00692EA1931B3A5003DB62A /* Tree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tree.h; sourceTree = "<group>"; };
+		C00692EB1931B3A5003DB62A /* Tree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tree.m; sourceTree = "<group>"; };
+		C00692ED1931B3E9003DB62A /* tree.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tree.png; sourceTree = "<group>"; };
+		C00692EF1931B653003DB62A /* wind.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wind.png; sourceTree = "<group>"; };
 		C0238789191F72AA00678B58 /* ScrollDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScrollDelegate.h; sourceTree = "<group>"; };
 		C023878A191F747D00678B58 /* GameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameController.h; sourceTree = "<group>"; };
 		C023878B191F747D00678B58 /* GameController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameController.m; sourceTree = "<group>"; };
@@ -772,6 +785,8 @@
 		C0AD484118FA4623008667F4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C00692EF1931B653003DB62A /* wind.png */,
+				C00692ED1931B3E9003DB62A /* tree.png */,
 				C0FEBA14191F544F00532668 /* mond2.jpg */,
 				C04AB10F190564C7002246F2 /* plane.png */,
 				C04AB10D190564C0002246F2 /* rock.png */,
@@ -1617,6 +1632,12 @@
 				C0FEBA17191F59C700532668 /* Background.m */,
 				C05EDA98192683A7004F99AD /* GameOver.h */,
 				C05EDA99192683A7004F99AD /* GameOver.m */,
+				C00692E4193190D5003DB62A /* Bomb.h */,
+				C00692E5193190D5003DB62A /* Bomb.m */,
+				C00692E71931B061003DB62A /* Wind.h */,
+				C00692E81931B061003DB62A /* Wind.m */,
+				C00692EA1931B3A5003DB62A /* Tree.h */,
+				C00692EB1931B3A5003DB62A /* Tree.m */,
 			);
 			name = Objects;
 			sourceTree = "<group>";
@@ -1724,6 +1745,7 @@
 				C0AD484C18FA4624008667F4 /* Icon.png in Resources */,
 				C0AD485A18FA4624008667F4 /* Icon-iPad-Spotlight-iOS7@2x.png in Resources */,
 				C0AD484918FA4624008667F4 /* Default-Landscape~ipad.png in Resources */,
+				C00692F01931B653003DB62A /* wind.png in Resources */,
 				C0AD485E18FA4624008667F4 /* Icon-Small.png in Resources */,
 				C0AD485C18FA4624008667F4 /* Icon-Small-50.png in Resources */,
 				C0AD4A4518FA4627008667F4 /* LICENSE_Kazmath.txt in Resources */,
@@ -1735,6 +1757,7 @@
 				C0AD485618FA4624008667F4 /* Icon-76@2x.png in Resources */,
 				C04AB10C190564BA002246F2 /* Enemy.png in Resources */,
 				C0AD4ACA18FA4628008667F4 /* LICENSE_Chipmunk.txt in Resources */,
+				C00692EE1931B3E9003DB62A /* tree.png in Resources */,
 				C0AD486418FA4624008667F4 /* Icon-Spotlight-iOS7@2x.png in Resources */,
 				C04AB110190564C7002246F2 /* plane.png in Resources */,
 				C0FEBA15191F544F00532668 /* mond2.jpg in Resources */,
@@ -1826,6 +1849,7 @@
 				C0AD48AC18FA4624008667F4 /* CCGLProgram.m in Sources */,
 				C0D5BF551900112F00174404 /* Meteor.m in Sources */,
 				C0412B6E190020F200335712 /* GameScene.m in Sources */,
+				C00692EC1931B3A5003DB62A /* Tree.m in Sources */,
 				C0AD4ACE18FA4628008667F4 /* main.m in Sources */,
 				C0AD49E118FA4627008667F4 /* OALAudioSession.m in Sources */,
 				C0AD4A5818FA4627008667F4 /* CCBLocalizationManager.m in Sources */,
@@ -1876,6 +1900,7 @@
 				C0AD4A4C18FA4627008667F4 /* CCBKeyframe.m in Sources */,
 				C0AD4A0618FA4627008667F4 /* CCControlTextureFactory.m in Sources */,
 				C0AD488B18FA4624008667F4 /* CCAnimationCache.m in Sources */,
+				C00692E91931B061003DB62A /* Wind.m in Sources */,
 				C0AD4A0F18FA4627008667F4 /* CCTableView.m in Sources */,
 				C0AD4AD218FA4628008667F4 /* AppDelegate.m in Sources */,
 				C0AD48A218FA4624008667F4 /* CCDrawingPrimitives.m in Sources */,
@@ -1892,6 +1917,7 @@
 				C0AD49D618FA4627008667F4 /* ALSource.m in Sources */,
 				C0AD48DE18FA4625008667F4 /* CCParticleSystem.m in Sources */,
 				C0AD490318FA4625008667F4 /* CCScene.m in Sources */,
+				C00692E6193190D5003DB62A /* Bomb.m in Sources */,
 				C0AD493118FA4625008667F4 /* CCTexture.m in Sources */,
 				C0A44C07190B4F8B008D145E /* SpawnController.m in Sources */,
 				C0AD49C318FA4626008667F4 /* ALCaptureDevice.m in Sources */,

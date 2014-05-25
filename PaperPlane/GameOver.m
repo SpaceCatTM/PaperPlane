@@ -56,6 +56,7 @@
 // 클릭 이벤트
 - (void)onRestartClicked:(id)sender
 {
+    [[GameController sharedInstance] Reset];
     [[CCDirector sharedDirector] replaceScene:[GameScene scene]];
 }
 @end

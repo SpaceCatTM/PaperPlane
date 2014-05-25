@@ -1,16 +1,17 @@
 //
-//  Meteor.m
+//  Bomb.m
 //  PaperPlane
 //
-//  Created by 이강용 on 2014. 4. 17..
-//  Copyright (c) 2014년 이강용. All rights reserved.
+//  Created by 이강용 on 2014. 5. 25..
+//  Copyright 2014년 이강용. All rights reserved.
 //
 
-#import "Meteor.h"
-#import "GameController.h"
-#import "GameSetting.h"
+#import "Bomb.h"
 
-@implementation Meteor
+#import "GameSetting.h"
+#import "GameController.h"
+
+@implementation Bomb
 
 @synthesize speed;
 
@@ -24,13 +25,7 @@
 // 이동하는 경우
 -(void)move
 {
-   self.position = ccp(self.position.x, self.position.y - ([GameController sharedInstance].scrollSpeed + self.speed));
-}
-
-// 죽는 경우
--(void)dead
-{
-    return;
+    self.position = ccp(self.position.x, self.position.y - ([GameController sharedInstance].scrollSpeed + self.speed));
 }
 
 // 초기화
@@ -39,8 +34,9 @@
     self = [super init];
     if (!self) return (nil);
     
-    self = [self initWithImageNamed:@"rock.png"];
-    self.speed = GameSetting.meteorSpeed;
+    self = [self initWithImageNamed:@"Enemy.png"];
+    self.speed = GameSetting.bombSpeed;
+    self.scale = 0.25;
     self.physicsBody = [CCPhysicsBody bodyWithCircleOfRadius:(self.contentSizeInPoints.width / 2) andCenter:self.anchorPointInPoints];
     self.physicsBody.collisionType = @"obstacleCollision";
     

@@ -11,34 +11,6 @@
 
 @implementation Plane
 
-// 정점 리스트
--(CGPoint *)getVertices
-{
-    return (CGPoint[])
-    {
-        228.1, -168.0,
-        141.3, 41.4,
-        47.4, 264.9,
-        32.7, 291.5,
-        16.9, 297.9,
-        3.9, 287.4,
-        -24.2, 230.2,
-        -91.2, 85.1,
-        -152.6, -49.1,
-        -198.2, -148.7,
-        -224.3, -208.1,
-        -217.9, -221.7,
-        -201.1, -229.1,
-        -74.3, -183.6,
-        38.3, -293.7,
-        50.8, -285.9,
-        48.9, -167.7,
-        208.7, -190.2,
-        222.7, -182.4,
-        226.6, -166.6
-    };
-};
-
 -(void)controlVelocity
 {
     if (self.physicsBody.velocity.x > 0)
@@ -62,11 +34,11 @@
         [self setRotation:self.rotation - 1];
     }
     
-    if (self.rotation >45)
+    if (self.rotation > 45)
     {
         [self setRotation:45];
     }
-    else if(self.rotation <-45)
+    else if(self.rotation < -45)
     {
         [self setRotation:-45];
     }

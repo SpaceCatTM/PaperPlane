@@ -52,4 +52,28 @@
     return 0.005;
 }
 
++(CGFloat) meteorSpeed
+{
+    // 운석 스피드
+    return 0.005;
+}
+
++(CGFloat) bombSpeed
+{
+    // 폭탄 스피드
+    return 0.005;
+}
+
++(CGFloat) windSpeed
+{
+    // 바람 스피드
+    return 0.005;
+}
+
++(CGPoint) windForce
+{
+    // 배율
+    return ccp(100.0, 0.0f);
+}
+
 @end
